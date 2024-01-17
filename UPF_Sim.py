@@ -1,6 +1,5 @@
 import schedule
 import time
-from queue import Queue
 
 
 class PDU:

@@ -95,10 +95,21 @@ compute_node.generate_upf(ue2.ue_id)
 schedule.every(time_interval).seconds.do(ue1.generate_pdu_sessions)
 schedule.every(time_interval).seconds.do(ue2.generate_pdu_sessions)
 
-# Run the scheduler for 60 seconds
-start_time = time.time()
-while time.time() - start_time < 60:
-    schedule.run_pending()
+# remove comments from the following block if simulation has to run for a defined amount of time
 
-# Log completion message to the console
-print("Simulation completed. Output written to output.txt.")
+# Run the scheduler for 60 seconds
+# start_time = time.time()
+# while time.time() - start_time < 60:
+#     schedule.run_pending()
+#
+# # Log completion message to the console
+# print("Simulation completed. Output written to output.txt.")
+
+# comment out the previous block if simulation should be run indefinitely and ended manually
+
+try:
+    while True:
+        schedule.run_pending()
+except KeyboardInterrupt:
+    print("Simulation interrupted manually.")
+    print("Output written to output.txt.")

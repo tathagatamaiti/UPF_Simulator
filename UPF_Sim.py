@@ -1,114 +1,122 @@
-import schedule
+from queue import Queue
 import time
 
 
 class PDU:
-    def __init__(self, ue_id, pdu_data, counter):
+    def __init__(self, ue_id, pdu_data, counter, duration):
         self.ue_id = ue_id
         self.pdu_data = pdu_data
         self.counter = counter
+        self.duration = duration
+        self.start_time = None
+        self.upf = None
 
     def generate_pdu_id(self):
         return f"PDU_{self.ue_id}_{self.counter}"
 
+    def associate_upf(self, upf):
+        self.upf = upf
+
     def __str__(self):
-        return f"{self.generate_pdu_id()}: {self.pdu_data}"
+        return f"{self.generate_pdu_id()}: {self.pdu_data} (Duration: {self.duration} seconds)"
 
 
 class UE:
-    def __init__(self, ue_id, compute_node, threshold):
-        self.ue_id = ue_id
+    def __init__(self, compute_node, threshold, pdu_limit):
+        self.ue_id = 1
+        self.compute_node = compute_node
         self.threshold = threshold
         self.pdu_counter = 0
-        self.compute_node = compute_node
+        self.pdu_limit = pdu_limit
+        self.pdu_queue = Queue()
 
     def generate_pdu_sessions(self):
-        pdu_data = f"PDU data for UE_{self.ue_id}"
-        for _ in range(self.threshold):
-            pdu_session = PDU(self.ue_id, pdu_data, self.pdu_counter)
-            self.compute_node.process_pdu_request(self, pdu_session)
+        for _ in range(self.threshold - 1):
+            pdu_data = f"PDU data for UE"
+            pdu_duration = 5  # Set the duration for each PDU session in seconds
+            pdu_session = PDU(self.ue_id, pdu_data, self.pdu_counter, pdu_duration)
+            self.pdu_queue.put(pdu_session)
+            with open("output.txt", "a") as file:
+                print(f"Generated {pdu_session}", file=file)
+
             self.pdu_counter += 1
+
+        # Generate a PDU session with longer duration 200 seconds
+        pdu_data = f"Long-duration PDU data for UE"
+        pdu_duration = 200
+        pdu_session = PDU(self.ue_id, pdu_data, self.pdu_counter, pdu_duration)
+        self.pdu_queue.put(pdu_session)
+        with open("output.txt", "a") as file:
+            print(f"Generated {pdu_session}", file=file)
+
+        # Send PDU request message for the generated PDU sessions
+        with open("output.txt", "a") as file:
+            print(f"UE{self.ue_id} sending PDU requests to Compute Node at time {time.time()}", file=file)
+        self.compute_node.process_pdu_requests(self)
+
+        return self.pdu_counter < self.pdu_limit
 
 
 class UPF:
     def __init__(self, upf_id):
         self.upf_id = upf_id
-        self.timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+        self.start_time = None
+
+    def process_pdu(self, pdu_session):
+        pdu_session.start_time = time.time()  # Simulating a delay before processing starts
+        pdu_session.associate_upf(self)
+        with open("output.txt", "a") as file:
+            print(f"{self.upf_id} processing {pdu_session}", file=file)
+
+        # Simulate processing time
+        time.sleep(1)
+        with open("output.txt", "a") as file:
+            print(f"{self.upf_id} completed processing {pdu_session}", file=file)
+
+    def terminate_upf(self, pdu_session):
+        with open("output.txt", "a") as file:
+            print(f"{self.upf_id} terminated after processing {pdu_session}", file=file)
 
 
 class ComputeNode:
     def __init__(self):
-        self.ues = []
         self.upfs = []
-
-    def add_ue(self, ue):
-        self.ues.append(ue)
 
     def add_upf(self, upf):
         self.upfs.append(upf)
 
-    def generate_upf(self, ue_id):
-        timestamp = time.strftime('%Y%m%d%H%M%S')
-        new_upf_id = f"UPF_{ue_id}_{timestamp}"
+    def generate_upf(self, pdu_session):
+        new_upf_id = f"UPF_{pdu_session.generate_pdu_id()}"
         new_upf = UPF(new_upf_id)
         self.add_upf(new_upf)
         return new_upf
 
-    def process_pdu_request(self, ue, pdu_session):
+    def process_pdu_requests(self, ue):
         with open("output.txt", "a") as file:
-            print(f"{ue.ue_id} generated {pdu_session} and sent request to ComputeNode.", file=file)
-
-        # Ensure there is at least one UPF available
-        if len(self.upfs) == 0:
-            new_upf = self.generate_upf(ue.ue_id)
+            print(f"Compute Node processing PDU requests at time {time.time()}", file=file)
+        while not ue.pdu_queue.empty():
+            pdu_session = ue.pdu_queue.get()
+            # Generate a new UPF for each PDU session
+            new_upf = self.generate_upf(pdu_session)
             with open("output.txt", "a") as file:
-                print(f"No available UPFs. Generated {new_upf.upf_id} to process {pdu_session}.", file=file)
-
-        # Assign the PDU session to an available UPF with the corresponding UE's ID
-        upf = next((upf for upf in self.upfs if ue.ue_id in upf.upf_id), None)
-        if upf:
-            with open("output.txt", "a") as file:
-                print(f"{upf.upf_id} ({upf.timestamp}) processing {pdu_session}", file=file)
-        else:
-            with open("output.txt", "a") as file:
-                print(f"No available UPFs for {ue.ue_id}.", file=file)
+                print(f"{new_upf.upf_id} assigned to process {pdu_session}", file=file)
+            new_upf.process_pdu(pdu_session)
+            new_upf.terminate_upf(pdu_session)
 
 
-# Set the time interval for PDU session generation in seconds
-time_interval = 1
+# Set the threshold for PDU session generation and processing
+threshold = 3
+pdu_limit = 20
 
-# Create instances of ComputeNode, UEs, and UPFs
+# Create instances of ComputeNode and UE
 compute_node = ComputeNode()
-ue1 = UE("UE1", compute_node, threshold=3)
-ue2 = UE("UE2", compute_node, threshold=2)
+ue = UE(compute_node, threshold, pdu_limit)
 
-# Register UEs with the ComputeNode
-compute_node.add_ue(ue1)
-compute_node.add_ue(ue2)
+# Register UE with the ComputeNode
+compute_node.add_upf(ue)
 
-# Generate initial UPFs
-compute_node.generate_upf(ue1.ue_id)
-compute_node.generate_upf(ue2.ue_id)
+# Generate and process PDUs until the pdu_limit is reached
+while ue.generate_pdu_sessions():
+    pass
 
-# Schedule the PDU session generation function for both UEs
-schedule.every(time_interval).seconds.do(ue1.generate_pdu_sessions)
-schedule.every(time_interval).seconds.do(ue2.generate_pdu_sessions)
-
-# remove comments from the following block if simulation has to run for a defined amount of time
-
-# Run the scheduler for 60 seconds
-# start_time = time.time()
-# while time.time() - start_time < 60:
-#     schedule.run_pending()
-#
-# # Log completion message to the console
-# print("Simulation completed. Output written to output.txt.")
-
-# comment out the previous block if simulation should be run indefinitely and ended manually
-
-try:
-    while True:
-        schedule.run_pending()
-except KeyboardInterrupt:
-    print("Simulation interrupted manually.")
-    print("Output written to output.txt.")
+print("Simulation completed. Output written to output.txt.")

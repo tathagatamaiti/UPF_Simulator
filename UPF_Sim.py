@@ -17,6 +17,12 @@ class PDU:
     def associate_upf(self, upf):
         self.upf = upf
 
+    def terminate_pdu(self):
+        # Simulate termination delay
+        time.sleep(1)
+        with open("output.txt", "a") as file:
+            print(f"{self.generate_pdu_id()} terminated after processing", file=file)
+
     def __str__(self):
         return f"{self.generate_pdu_id()}: {self.pdu_data} (Duration: {self.duration} seconds)"
 
@@ -73,9 +79,7 @@ class UPF:
         with open("output.txt", "a") as file:
             print(f"{self.upf_id} completed processing {pdu_session}", file=file)
 
-    def terminate_upf(self, pdu_session):
-        with open("output.txt", "a") as file:
-            print(f"{self.upf_id} terminated after processing {pdu_session}", file=file)
+        pdu_session.terminate_pdu()
 
 
 class ComputeNode:
@@ -101,7 +105,6 @@ class ComputeNode:
             with open("output.txt", "a") as file:
                 print(f"{new_upf.upf_id} assigned to process {pdu_session}", file=file)
             new_upf.process_pdu(pdu_session)
-            new_upf.terminate_upf(pdu_session)
 
 
 # Set the threshold for PDU session generation and processing

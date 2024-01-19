@@ -1,0 +1,170 @@
+Generated PDU_1_0: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_1: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_2: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666228.0499356
+Compute Node processing PDU requests at time 1705666228.0499356
+UPF_PDU_1_0 assigned to process PDU_1_0: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_0 processing PDU_1_0: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_0 completed processing PDU_1_0: PDU data for UE (Duration: 5 seconds)
+PDU_1_0 terminated after processing
+UPF_PDU_1_1 assigned to process PDU_1_1: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_1 processing PDU_1_1: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_1 completed processing PDU_1_1: PDU data for UE (Duration: 5 seconds)
+PDU_1_1 terminated after processing
+UPF_PDU_1_2 assigned to process PDU_1_2: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_2 processing PDU_1_2: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_2 completed processing PDU_1_2: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_2 terminated after processing
+Generated PDU_1_2: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_3: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_4: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666234.0617535
+Compute Node processing PDU requests at time 1705666234.0617535
+UPF_PDU_1_2 assigned to process PDU_1_2: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_2 processing PDU_1_2: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_2 completed processing PDU_1_2: PDU data for UE (Duration: 5 seconds)
+PDU_1_2 terminated after processing
+UPF_PDU_1_3 assigned to process PDU_1_3: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_3 processing PDU_1_3: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_3 completed processing PDU_1_3: PDU data for UE (Duration: 5 seconds)
+PDU_1_3 terminated after processing
+UPF_PDU_1_4 assigned to process PDU_1_4: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_4 processing PDU_1_4: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_4 completed processing PDU_1_4: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_4 terminated after processing
+Generated PDU_1_4: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_5: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_6: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666240.0715144
+Compute Node processing PDU requests at time 1705666240.0715144
+UPF_PDU_1_4 assigned to process PDU_1_4: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_4 processing PDU_1_4: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_4 completed processing PDU_1_4: PDU data for UE (Duration: 5 seconds)
+PDU_1_4 terminated after processing
+UPF_PDU_1_5 assigned to process PDU_1_5: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_5 processing PDU_1_5: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_5 completed processing PDU_1_5: PDU data for UE (Duration: 5 seconds)
+PDU_1_5 terminated after processing
+UPF_PDU_1_6 assigned to process PDU_1_6: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_6 processing PDU_1_6: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_6 completed processing PDU_1_6: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_6 terminated after processing
+Generated PDU_1_6: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_7: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_8: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666246.0811903
+Compute Node processing PDU requests at time 1705666246.0811903
+UPF_PDU_1_6 assigned to process PDU_1_6: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_6 processing PDU_1_6: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_6 completed processing PDU_1_6: PDU data for UE (Duration: 5 seconds)
+PDU_1_6 terminated after processing
+UPF_PDU_1_7 assigned to process PDU_1_7: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_7 processing PDU_1_7: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_7 completed processing PDU_1_7: PDU data for UE (Duration: 5 seconds)
+PDU_1_7 terminated after processing
+UPF_PDU_1_8 assigned to process PDU_1_8: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_8 processing PDU_1_8: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_8 completed processing PDU_1_8: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_8 terminated after processing
+Generated PDU_1_8: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_9: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_10: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666252.088667
+Compute Node processing PDU requests at time 1705666252.088667
+UPF_PDU_1_8 assigned to process PDU_1_8: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_8 processing PDU_1_8: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_8 completed processing PDU_1_8: PDU data for UE (Duration: 5 seconds)
+PDU_1_8 terminated after processing
+UPF_PDU_1_9 assigned to process PDU_1_9: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_9 processing PDU_1_9: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_9 completed processing PDU_1_9: PDU data for UE (Duration: 5 seconds)
+PDU_1_9 terminated after processing
+UPF_PDU_1_10 assigned to process PDU_1_10: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_10 processing PDU_1_10: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_10 completed processing PDU_1_10: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_10 terminated after processing
+Generated PDU_1_10: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_11: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_12: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666258.095664
+Compute Node processing PDU requests at time 1705666258.095664
+UPF_PDU_1_10 assigned to process PDU_1_10: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_10 processing PDU_1_10: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_10 completed processing PDU_1_10: PDU data for UE (Duration: 5 seconds)
+PDU_1_10 terminated after processing
+UPF_PDU_1_11 assigned to process PDU_1_11: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_11 processing PDU_1_11: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_11 completed processing PDU_1_11: PDU data for UE (Duration: 5 seconds)
+PDU_1_11 terminated after processing
+UPF_PDU_1_12 assigned to process PDU_1_12: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_12 processing PDU_1_12: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_12 completed processing PDU_1_12: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_12 terminated after processing
+Generated PDU_1_12: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_13: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_14: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666264.104644
+Compute Node processing PDU requests at time 1705666264.104644
+UPF_PDU_1_12 assigned to process PDU_1_12: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_12 processing PDU_1_12: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_12 completed processing PDU_1_12: PDU data for UE (Duration: 5 seconds)
+PDU_1_12 terminated after processing
+UPF_PDU_1_13 assigned to process PDU_1_13: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_13 processing PDU_1_13: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_13 completed processing PDU_1_13: PDU data for UE (Duration: 5 seconds)
+PDU_1_13 terminated after processing
+UPF_PDU_1_14 assigned to process PDU_1_14: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_14 processing PDU_1_14: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_14 completed processing PDU_1_14: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_14 terminated after processing
+Generated PDU_1_14: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_15: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_16: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666270.1156116
+Compute Node processing PDU requests at time 1705666270.1156116
+UPF_PDU_1_14 assigned to process PDU_1_14: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_14 processing PDU_1_14: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_14 completed processing PDU_1_14: PDU data for UE (Duration: 5 seconds)
+PDU_1_14 terminated after processing
+UPF_PDU_1_15 assigned to process PDU_1_15: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_15 processing PDU_1_15: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_15 completed processing PDU_1_15: PDU data for UE (Duration: 5 seconds)
+PDU_1_15 terminated after processing
+UPF_PDU_1_16 assigned to process PDU_1_16: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_16 processing PDU_1_16: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_16 completed processing PDU_1_16: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_16 terminated after processing
+Generated PDU_1_16: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_17: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_18: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666276.1251934
+Compute Node processing PDU requests at time 1705666276.1261947
+UPF_PDU_1_16 assigned to process PDU_1_16: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_16 processing PDU_1_16: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_16 completed processing PDU_1_16: PDU data for UE (Duration: 5 seconds)
+PDU_1_16 terminated after processing
+UPF_PDU_1_17 assigned to process PDU_1_17: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_17 processing PDU_1_17: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_17 completed processing PDU_1_17: PDU data for UE (Duration: 5 seconds)
+PDU_1_17 terminated after processing
+UPF_PDU_1_18 assigned to process PDU_1_18: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_18 processing PDU_1_18: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_18 completed processing PDU_1_18: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_18 terminated after processing
+Generated PDU_1_18: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_19: PDU data for UE (Duration: 5 seconds)
+Generated PDU_1_20: Long-duration PDU data for UE (Duration: 200 seconds)
+UE1 sending PDU requests to Compute Node at time 1705666282.1339283
+Compute Node processing PDU requests at time 1705666282.1352067
+UPF_PDU_1_18 assigned to process PDU_1_18: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_18 processing PDU_1_18: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_18 completed processing PDU_1_18: PDU data for UE (Duration: 5 seconds)
+PDU_1_18 terminated after processing
+UPF_PDU_1_19 assigned to process PDU_1_19: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_19 processing PDU_1_19: PDU data for UE (Duration: 5 seconds)
+UPF_PDU_1_19 completed processing PDU_1_19: PDU data for UE (Duration: 5 seconds)
+PDU_1_19 terminated after processing
+UPF_PDU_1_20 assigned to process PDU_1_20: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_20 processing PDU_1_20: Long-duration PDU data for UE (Duration: 200 seconds)
+UPF_PDU_1_20 completed processing PDU_1_20: Long-duration PDU data for UE (Duration: 200 seconds)
+PDU_1_20 terminated after processing

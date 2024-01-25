@@ -1,170 +1,540 @@
-0.00: Generated 0.00: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
-2.16: Generated 2.16: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
-4.63: Generated 4.63: PDU_1_2 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.63: UE1 sending PDU requests to Compute Node
-4.63: Compute Node processing PDU requests
-4.63: UPF_PDU_1_0 assigned to process 0.00: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
-4.63: UPF_PDU_1_0 processing 4.63: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
-4.63: UPF_PDU_1_0 completed processing 4.63: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
-4.63: PDU_1_0 terminated after processing
-4.63: UPF_PDU_1_1 assigned to process 2.16: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
-4.63: UPF_PDU_1_1 processing 4.63: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
-4.63: UPF_PDU_1_1 completed processing 4.63: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
-4.63: PDU_1_1 terminated after processing
-4.63: UPF_PDU_1_2 assigned to process 4.63: PDU_1_2 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.63: UPF_PDU_1_2 processing 4.63: PDU_1_2 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.63: UPF_PDU_1_2 completed processing 4.63: PDU_1_2 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.63: PDU_1_2 terminated after processing
-0.00: Generated 0.00: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
-4.84: Generated 4.84: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
-6.69: Generated 6.69: PDU_1_4 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.69: UE1 sending PDU requests to Compute Node
-6.69: Compute Node processing PDU requests
-6.69: UPF_PDU_1_2 assigned to process 0.00: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
-6.69: UPF_PDU_1_2 processing 6.69: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
-6.69: UPF_PDU_1_2 completed processing 6.69: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
-6.69: PDU_1_2 terminated after processing
-6.69: UPF_PDU_1_3 assigned to process 4.84: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
-6.69: UPF_PDU_1_3 processing 6.69: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
-6.69: UPF_PDU_1_3 completed processing 6.69: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
-6.69: PDU_1_3 terminated after processing
-6.69: UPF_PDU_1_4 assigned to process 6.69: PDU_1_4 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.69: UPF_PDU_1_4 processing 6.69: PDU_1_4 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.69: UPF_PDU_1_4 completed processing 6.69: PDU_1_4 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.69: PDU_1_4 terminated after processing
-0.00: Generated 0.00: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
-2.87: Generated 2.87: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
-5.98: Generated 5.98: PDU_1_6 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.98: UE1 sending PDU requests to Compute Node
-5.98: Compute Node processing PDU requests
-5.98: UPF_PDU_1_4 assigned to process 0.00: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
-5.98: UPF_PDU_1_4 processing 5.98: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
-5.98: UPF_PDU_1_4 completed processing 5.98: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
-5.98: PDU_1_4 terminated after processing
-5.98: UPF_PDU_1_5 assigned to process 2.87: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
-5.98: UPF_PDU_1_5 processing 5.98: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
-5.98: UPF_PDU_1_5 completed processing 5.98: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
-5.98: PDU_1_5 terminated after processing
-5.98: UPF_PDU_1_6 assigned to process 5.98: PDU_1_6 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.98: UPF_PDU_1_6 processing 5.98: PDU_1_6 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.98: UPF_PDU_1_6 completed processing 5.98: PDU_1_6 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.98: PDU_1_6 terminated after processing
-0.00: Generated 0.00: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
-4.18: Generated 4.18: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
-6.74: Generated 6.74: PDU_1_8 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.74: UE1 sending PDU requests to Compute Node
-6.74: Compute Node processing PDU requests
-6.74: UPF_PDU_1_6 assigned to process 0.00: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
-6.74: UPF_PDU_1_6 processing 6.74: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
-6.74: UPF_PDU_1_6 completed processing 6.74: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
-6.74: PDU_1_6 terminated after processing
-6.74: UPF_PDU_1_7 assigned to process 4.18: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
-6.74: UPF_PDU_1_7 processing 6.74: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
-6.74: UPF_PDU_1_7 completed processing 6.74: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
-6.74: PDU_1_7 terminated after processing
-6.74: UPF_PDU_1_8 assigned to process 6.74: PDU_1_8 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.74: UPF_PDU_1_8 processing 6.74: PDU_1_8 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.74: UPF_PDU_1_8 completed processing 6.74: PDU_1_8 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.74: PDU_1_8 terminated after processing
-0.00: Generated 0.00: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
-2.06: Generated 2.06: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
-6.05: Generated 6.05: PDU_1_10 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.05: UE1 sending PDU requests to Compute Node
-6.05: Compute Node processing PDU requests
-6.05: UPF_PDU_1_8 assigned to process 0.00: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
-6.05: UPF_PDU_1_8 processing 6.05: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
-6.05: UPF_PDU_1_8 completed processing 6.05: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
-6.05: PDU_1_8 terminated after processing
-6.05: UPF_PDU_1_9 assigned to process 2.06: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
-6.05: UPF_PDU_1_9 processing 6.05: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
-6.05: UPF_PDU_1_9 completed processing 6.05: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
-6.05: PDU_1_9 terminated after processing
-6.05: UPF_PDU_1_10 assigned to process 6.05: PDU_1_10 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.05: UPF_PDU_1_10 processing 6.05: PDU_1_10 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.05: UPF_PDU_1_10 completed processing 6.05: PDU_1_10 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.05: PDU_1_10 terminated after processing
-0.00: Generated 0.00: PDU_1_10 - PDU data for UE (Duration: 5 seconds)
-4.21: Generated 4.21: PDU_1_11 - PDU data for UE (Duration: 5 seconds)
-6.55: Generated 6.55: PDU_1_12 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.55: UE1 sending PDU requests to Compute Node
-6.55: Compute Node processing PDU requests
-6.55: UPF_PDU_1_10 assigned to process 0.00: PDU_1_10 - PDU data for UE (Duration: 5 seconds)
-6.55: UPF_PDU_1_10 processing 6.55: PDU_1_10 - PDU data for UE (Duration: 5 seconds)
-6.55: UPF_PDU_1_10 completed processing 6.55: PDU_1_10 - PDU data for UE (Duration: 5 seconds)
-6.55: PDU_1_10 terminated after processing
-6.55: UPF_PDU_1_11 assigned to process 4.21: PDU_1_11 - PDU data for UE (Duration: 5 seconds)
-6.55: UPF_PDU_1_11 processing 6.55: PDU_1_11 - PDU data for UE (Duration: 5 seconds)
-6.55: UPF_PDU_1_11 completed processing 6.55: PDU_1_11 - PDU data for UE (Duration: 5 seconds)
-6.55: PDU_1_11 terminated after processing
-6.55: UPF_PDU_1_12 assigned to process 6.55: PDU_1_12 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.55: UPF_PDU_1_12 processing 6.55: PDU_1_12 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.55: UPF_PDU_1_12 completed processing 6.55: PDU_1_12 - Long-duration PDU data for UE (Duration: 200 seconds)
-6.55: PDU_1_12 terminated after processing
-0.00: Generated 0.00: PDU_1_12 - PDU data for UE (Duration: 5 seconds)
-2.70: Generated 2.70: PDU_1_13 - PDU data for UE (Duration: 5 seconds)
-4.90: Generated 4.90: PDU_1_14 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.90: UE1 sending PDU requests to Compute Node
-4.90: Compute Node processing PDU requests
-4.90: UPF_PDU_1_12 assigned to process 0.00: PDU_1_12 - PDU data for UE (Duration: 5 seconds)
-4.90: UPF_PDU_1_12 processing 4.90: PDU_1_12 - PDU data for UE (Duration: 5 seconds)
-4.90: UPF_PDU_1_12 completed processing 4.90: PDU_1_12 - PDU data for UE (Duration: 5 seconds)
-4.90: PDU_1_12 terminated after processing
-4.90: UPF_PDU_1_13 assigned to process 2.70: PDU_1_13 - PDU data for UE (Duration: 5 seconds)
-4.90: UPF_PDU_1_13 processing 4.90: PDU_1_13 - PDU data for UE (Duration: 5 seconds)
-4.90: UPF_PDU_1_13 completed processing 4.90: PDU_1_13 - PDU data for UE (Duration: 5 seconds)
-4.90: PDU_1_13 terminated after processing
-4.90: UPF_PDU_1_14 assigned to process 4.90: PDU_1_14 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.90: UPF_PDU_1_14 processing 4.90: PDU_1_14 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.90: UPF_PDU_1_14 completed processing 4.90: PDU_1_14 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.90: PDU_1_14 terminated after processing
-0.00: Generated 0.00: PDU_1_14 - PDU data for UE (Duration: 5 seconds)
-3.09: Generated 3.09: PDU_1_15 - PDU data for UE (Duration: 5 seconds)
-4.86: Generated 4.86: PDU_1_16 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.86: UE1 sending PDU requests to Compute Node
-4.86: Compute Node processing PDU requests
-4.86: UPF_PDU_1_14 assigned to process 0.00: PDU_1_14 - PDU data for UE (Duration: 5 seconds)
-4.86: UPF_PDU_1_14 processing 4.86: PDU_1_14 - PDU data for UE (Duration: 5 seconds)
-4.86: UPF_PDU_1_14 completed processing 4.86: PDU_1_14 - PDU data for UE (Duration: 5 seconds)
-4.86: PDU_1_14 terminated after processing
-4.86: UPF_PDU_1_15 assigned to process 3.09: PDU_1_15 - PDU data for UE (Duration: 5 seconds)
-4.86: UPF_PDU_1_15 processing 4.86: PDU_1_15 - PDU data for UE (Duration: 5 seconds)
-4.86: UPF_PDU_1_15 completed processing 4.86: PDU_1_15 - PDU data for UE (Duration: 5 seconds)
-4.86: PDU_1_15 terminated after processing
-4.86: UPF_PDU_1_16 assigned to process 4.86: PDU_1_16 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.86: UPF_PDU_1_16 processing 4.86: PDU_1_16 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.86: UPF_PDU_1_16 completed processing 4.86: PDU_1_16 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.86: PDU_1_16 terminated after processing
-0.00: Generated 0.00: PDU_1_16 - PDU data for UE (Duration: 5 seconds)
-3.40: Generated 3.40: PDU_1_17 - PDU data for UE (Duration: 5 seconds)
-5.01: Generated 5.01: PDU_1_18 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.01: UE1 sending PDU requests to Compute Node
-5.01: Compute Node processing PDU requests
-5.01: UPF_PDU_1_16 assigned to process 0.00: PDU_1_16 - PDU data for UE (Duration: 5 seconds)
-5.01: UPF_PDU_1_16 processing 5.01: PDU_1_16 - PDU data for UE (Duration: 5 seconds)
-5.01: UPF_PDU_1_16 completed processing 5.01: PDU_1_16 - PDU data for UE (Duration: 5 seconds)
-5.01: PDU_1_16 terminated after processing
-5.01: UPF_PDU_1_17 assigned to process 3.40: PDU_1_17 - PDU data for UE (Duration: 5 seconds)
-5.01: UPF_PDU_1_17 processing 5.01: PDU_1_17 - PDU data for UE (Duration: 5 seconds)
-5.01: UPF_PDU_1_17 completed processing 5.01: PDU_1_17 - PDU data for UE (Duration: 5 seconds)
-5.01: PDU_1_17 terminated after processing
-5.01: UPF_PDU_1_18 assigned to process 5.01: PDU_1_18 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.01: UPF_PDU_1_18 processing 5.01: PDU_1_18 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.01: UPF_PDU_1_18 completed processing 5.01: PDU_1_18 - Long-duration PDU data for UE (Duration: 200 seconds)
-5.01: PDU_1_18 terminated after processing
-0.00: Generated 0.00: PDU_1_18 - PDU data for UE (Duration: 5 seconds)
-2.18: Generated 2.18: PDU_1_19 - PDU data for UE (Duration: 5 seconds)
-4.17: Generated 4.17: PDU_1_20 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.17: UE1 sending PDU requests to Compute Node
-4.17: Compute Node processing PDU requests
-4.17: UPF_PDU_1_18 assigned to process 0.00: PDU_1_18 - PDU data for UE (Duration: 5 seconds)
-4.17: UPF_PDU_1_18 processing 4.17: PDU_1_18 - PDU data for UE (Duration: 5 seconds)
-4.17: UPF_PDU_1_18 completed processing 4.17: PDU_1_18 - PDU data for UE (Duration: 5 seconds)
-4.17: PDU_1_18 terminated after processing
-4.17: UPF_PDU_1_19 assigned to process 2.18: PDU_1_19 - PDU data for UE (Duration: 5 seconds)
-4.17: UPF_PDU_1_19 processing 4.17: PDU_1_19 - PDU data for UE (Duration: 5 seconds)
-4.17: UPF_PDU_1_19 completed processing 4.17: PDU_1_19 - PDU data for UE (Duration: 5 seconds)
-4.17: PDU_1_19 terminated after processing
-4.17: UPF_PDU_1_20 assigned to process 4.17: PDU_1_20 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.17: UPF_PDU_1_20 processing 4.17: PDU_1_20 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.17: UPF_PDU_1_20 completed processing 4.17: PDU_1_20 - Long-duration PDU data for UE (Duration: 200 seconds)
-4.17: PDU_1_20 terminated after processing
+0.00: UE1 generated 0.00: PDU_1_0 - PDU data for UE
+4.28: UE1 generated 4.28: PDU_1_1 - PDU data for UE
+8.28: UE1 generated 8.28: PDU_1_2 - PDU data for UE
+13.06: UE1 generated 13.06: PDU_1_3 - PDU data for UE
+16.71: UE1 generated 16.71: PDU_1_4 - PDU data for UE
+16.71: UE1 sending PDU requests to Compute Node
+16.71: Compute Node processing PDU requests
+16.71: UPF_PDU_1_0 assigned to process 0.00: PDU_1_0 - PDU data for UE
+16.71: UPF_PDU_1_0 processing 16.71: PDU_1_0 - PDU data for UE
+16.71: UPF_PDU_1_0 completed processing 16.71: PDU_1_0 - PDU data for UE
+16.71: PDU_1_0 terminated after processing
+16.71: UPF_PDU_1_1 assigned to process 4.28: PDU_1_1 - PDU data for UE
+16.71: UPF_PDU_1_1 processing 16.71: PDU_1_1 - PDU data for UE
+16.71: UPF_PDU_1_1 completed processing 16.71: PDU_1_1 - PDU data for UE
+16.71: PDU_1_1 terminated after processing
+16.71: UPF_PDU_1_2 assigned to process 8.28: PDU_1_2 - PDU data for UE
+16.71: UPF_PDU_1_2 processing 16.71: PDU_1_2 - PDU data for UE
+16.71: UPF_PDU_1_2 completed processing 16.71: PDU_1_2 - PDU data for UE
+16.71: PDU_1_2 terminated after processing
+16.71: UPF_PDU_1_3 assigned to process 13.06: PDU_1_3 - PDU data for UE
+16.71: UPF_PDU_1_3 processing 16.71: PDU_1_3 - PDU data for UE
+16.71: UPF_PDU_1_3 completed processing 16.71: PDU_1_3 - PDU data for UE
+16.71: PDU_1_3 terminated after processing
+16.71: UPF_PDU_1_4 assigned to process 16.71: PDU_1_4 - PDU data for UE
+16.71: UPF_PDU_1_4 processing 16.71: PDU_1_4 - PDU data for UE
+16.71: UPF_PDU_1_4 completed processing 16.71: PDU_1_4 - PDU data for UE
+16.71: PDU_1_4 terminated after processing
+20.31: UE1 generated 20.31: PDU_1_5 - PDU data for UE
+21.53: UE1 generated 21.53: PDU_1_6 - PDU data for UE
+25.48: UE1 generated 25.48: PDU_1_7 - PDU data for UE
+27.21: UE1 generated 27.21: PDU_1_8 - PDU data for UE
+29.08: UE1 generated 29.08: PDU_1_9 - PDU data for UE
+29.08: UE1 sending PDU requests to Compute Node
+29.08: Compute Node processing PDU requests
+29.08: UPF_PDU_1_5 assigned to process 20.31: PDU_1_5 - PDU data for UE
+29.08: UPF_PDU_1_5 processing 29.08: PDU_1_5 - PDU data for UE
+29.08: UPF_PDU_1_5 completed processing 29.08: PDU_1_5 - PDU data for UE
+29.08: PDU_1_5 terminated after processing
+29.08: UPF_PDU_1_6 assigned to process 21.53: PDU_1_6 - PDU data for UE
+29.08: UPF_PDU_1_6 processing 29.08: PDU_1_6 - PDU data for UE
+29.08: UPF_PDU_1_6 completed processing 29.08: PDU_1_6 - PDU data for UE
+29.08: PDU_1_6 terminated after processing
+29.08: UPF_PDU_1_7 assigned to process 25.48: PDU_1_7 - PDU data for UE
+29.08: UPF_PDU_1_7 processing 29.08: PDU_1_7 - PDU data for UE
+29.08: UPF_PDU_1_7 completed processing 29.08: PDU_1_7 - PDU data for UE
+29.08: PDU_1_7 terminated after processing
+29.08: UPF_PDU_1_8 assigned to process 27.21: PDU_1_8 - PDU data for UE
+29.08: UPF_PDU_1_8 processing 29.08: PDU_1_8 - PDU data for UE
+29.08: UPF_PDU_1_8 completed processing 29.08: PDU_1_8 - PDU data for UE
+29.08: PDU_1_8 terminated after processing
+29.08: UPF_PDU_1_9 assigned to process 29.08: PDU_1_9 - PDU data for UE
+29.08: UPF_PDU_1_9 processing 29.08: PDU_1_9 - PDU data for UE
+29.08: UPF_PDU_1_9 completed processing 29.08: PDU_1_9 - PDU data for UE
+29.08: PDU_1_9 terminated after processing
+32.40: UE1 generated 32.40: PDU_1_10 - PDU data for UE
+36.39: UE1 generated 36.39: PDU_1_11 - PDU data for UE
+38.90: UE1 generated 38.90: PDU_1_12 - PDU data for UE
+42.91: UE1 generated 42.91: PDU_1_13 - PDU data for UE
+45.46: UE1 generated 45.46: PDU_1_14 - PDU data for UE
+45.46: UE1 sending PDU requests to Compute Node
+45.46: Compute Node processing PDU requests
+45.46: UPF_PDU_1_10 assigned to process 32.40: PDU_1_10 - PDU data for UE
+45.46: UPF_PDU_1_10 processing 45.46: PDU_1_10 - PDU data for UE
+45.46: UPF_PDU_1_10 completed processing 45.46: PDU_1_10 - PDU data for UE
+45.46: PDU_1_10 terminated after processing
+45.46: UPF_PDU_1_11 assigned to process 36.39: PDU_1_11 - PDU data for UE
+45.46: UPF_PDU_1_11 processing 45.46: PDU_1_11 - PDU data for UE
+45.46: UPF_PDU_1_11 completed processing 45.46: PDU_1_11 - PDU data for UE
+45.46: PDU_1_11 terminated after processing
+45.46: UPF_PDU_1_12 assigned to process 38.90: PDU_1_12 - PDU data for UE
+45.46: UPF_PDU_1_12 processing 45.46: PDU_1_12 - PDU data for UE
+45.46: UPF_PDU_1_12 completed processing 45.46: PDU_1_12 - PDU data for UE
+45.46: PDU_1_12 terminated after processing
+45.46: UPF_PDU_1_13 assigned to process 42.91: PDU_1_13 - PDU data for UE
+45.46: UPF_PDU_1_13 processing 45.46: PDU_1_13 - PDU data for UE
+45.46: UPF_PDU_1_13 completed processing 45.46: PDU_1_13 - PDU data for UE
+45.46: PDU_1_13 terminated after processing
+45.46: UPF_PDU_1_14 assigned to process 45.46: PDU_1_14 - PDU data for UE
+45.46: UPF_PDU_1_14 processing 45.46: PDU_1_14 - PDU data for UE
+45.46: UPF_PDU_1_14 completed processing 45.46: PDU_1_14 - PDU data for UE
+45.46: PDU_1_14 terminated after processing
+50.08: UE1 generated 50.08: PDU_1_15 - PDU data for UE
+53.18: UE1 generated 53.18: PDU_1_16 - PDU data for UE
+57.19: UE1 generated 57.19: PDU_1_17 - PDU data for UE
+59.90: UE1 generated 59.90: PDU_1_18 - PDU data for UE
+62.74: UE1 generated 62.74: PDU_1_19 - PDU data for UE
+62.74: UE1 sending PDU requests to Compute Node
+62.74: Compute Node processing PDU requests
+62.74: UPF_PDU_1_15 assigned to process 50.08: PDU_1_15 - PDU data for UE
+62.74: UPF_PDU_1_15 processing 62.74: PDU_1_15 - PDU data for UE
+62.74: UPF_PDU_1_15 completed processing 62.74: PDU_1_15 - PDU data for UE
+62.74: PDU_1_15 terminated after processing
+62.74: UPF_PDU_1_16 assigned to process 53.18: PDU_1_16 - PDU data for UE
+62.74: UPF_PDU_1_16 processing 62.74: PDU_1_16 - PDU data for UE
+62.74: UPF_PDU_1_16 completed processing 62.74: PDU_1_16 - PDU data for UE
+62.74: PDU_1_16 terminated after processing
+62.74: UPF_PDU_1_17 assigned to process 57.19: PDU_1_17 - PDU data for UE
+62.74: UPF_PDU_1_17 processing 62.74: PDU_1_17 - PDU data for UE
+62.74: UPF_PDU_1_17 completed processing 62.74: PDU_1_17 - PDU data for UE
+62.74: PDU_1_17 terminated after processing
+62.74: UPF_PDU_1_18 assigned to process 59.90: PDU_1_18 - PDU data for UE
+62.74: UPF_PDU_1_18 processing 62.74: PDU_1_18 - PDU data for UE
+62.74: UPF_PDU_1_18 completed processing 62.74: PDU_1_18 - PDU data for UE
+62.74: PDU_1_18 terminated after processing
+62.74: UPF_PDU_1_19 assigned to process 62.74: PDU_1_19 - PDU data for UE
+62.74: UPF_PDU_1_19 processing 62.74: PDU_1_19 - PDU data for UE
+62.74: UPF_PDU_1_19 completed processing 62.74: PDU_1_19 - PDU data for UE
+62.74: PDU_1_19 terminated after processing
+64.38: UE1 generated 64.38: PDU_1_20 - PDU data for UE
+65.56: UE1 generated 65.56: PDU_1_21 - PDU data for UE
+67.97: UE1 generated 67.97: PDU_1_22 - PDU data for UE
+70.31: UE1 generated 70.31: PDU_1_23 - PDU data for UE
+74.33: UE1 generated 74.33: PDU_1_24 - PDU data for UE
+74.33: UE1 sending PDU requests to Compute Node
+74.33: Compute Node processing PDU requests
+74.33: UPF_PDU_1_20 assigned to process 64.38: PDU_1_20 - PDU data for UE
+74.33: UPF_PDU_1_20 processing 74.33: PDU_1_20 - PDU data for UE
+74.33: UPF_PDU_1_20 completed processing 74.33: PDU_1_20 - PDU data for UE
+74.33: PDU_1_20 terminated after processing
+74.33: UPF_PDU_1_21 assigned to process 65.56: PDU_1_21 - PDU data for UE
+74.33: UPF_PDU_1_21 processing 74.33: PDU_1_21 - PDU data for UE
+74.33: UPF_PDU_1_21 completed processing 74.33: PDU_1_21 - PDU data for UE
+74.33: PDU_1_21 terminated after processing
+74.33: UPF_PDU_1_22 assigned to process 67.97: PDU_1_22 - PDU data for UE
+74.33: UPF_PDU_1_22 processing 74.33: PDU_1_22 - PDU data for UE
+74.33: UPF_PDU_1_22 completed processing 74.33: PDU_1_22 - PDU data for UE
+74.33: PDU_1_22 terminated after processing
+74.33: UPF_PDU_1_23 assigned to process 70.31: PDU_1_23 - PDU data for UE
+74.33: UPF_PDU_1_23 processing 74.33: PDU_1_23 - PDU data for UE
+74.33: UPF_PDU_1_23 completed processing 74.33: PDU_1_23 - PDU data for UE
+74.33: PDU_1_23 terminated after processing
+74.33: UPF_PDU_1_24 assigned to process 74.33: PDU_1_24 - PDU data for UE
+74.33: UPF_PDU_1_24 processing 74.33: PDU_1_24 - PDU data for UE
+74.33: UPF_PDU_1_24 completed processing 74.33: PDU_1_24 - PDU data for UE
+74.33: PDU_1_24 terminated after processing
+78.33: UE1 generated 78.33: PDU_1_25 - PDU data for UE
+80.18: UE1 generated 80.18: PDU_1_26 - PDU data for UE
+83.31: UE1 generated 83.31: PDU_1_27 - PDU data for UE
+87.86: UE1 generated 87.86: PDU_1_28 - PDU data for UE
+91.23: UE1 generated 91.23: PDU_1_29 - PDU data for UE
+91.23: UE1 sending PDU requests to Compute Node
+91.23: Compute Node processing PDU requests
+91.23: UPF_PDU_1_25 assigned to process 78.33: PDU_1_25 - PDU data for UE
+91.23: UPF_PDU_1_25 processing 91.23: PDU_1_25 - PDU data for UE
+91.23: UPF_PDU_1_25 completed processing 91.23: PDU_1_25 - PDU data for UE
+91.23: PDU_1_25 terminated after processing
+91.23: UPF_PDU_1_26 assigned to process 80.18: PDU_1_26 - PDU data for UE
+91.23: UPF_PDU_1_26 processing 91.23: PDU_1_26 - PDU data for UE
+91.23: UPF_PDU_1_26 completed processing 91.23: PDU_1_26 - PDU data for UE
+91.23: PDU_1_26 terminated after processing
+91.23: UPF_PDU_1_27 assigned to process 83.31: PDU_1_27 - PDU data for UE
+91.23: UPF_PDU_1_27 processing 91.23: PDU_1_27 - PDU data for UE
+91.23: UPF_PDU_1_27 completed processing 91.23: PDU_1_27 - PDU data for UE
+91.23: PDU_1_27 terminated after processing
+91.23: UPF_PDU_1_28 assigned to process 87.86: PDU_1_28 - PDU data for UE
+91.23: UPF_PDU_1_28 processing 91.23: PDU_1_28 - PDU data for UE
+91.23: UPF_PDU_1_28 completed processing 91.23: PDU_1_28 - PDU data for UE
+91.23: PDU_1_28 terminated after processing
+91.23: UPF_PDU_1_29 assigned to process 91.23: PDU_1_29 - PDU data for UE
+91.23: UPF_PDU_1_29 processing 91.23: PDU_1_29 - PDU data for UE
+91.23: UPF_PDU_1_29 completed processing 91.23: PDU_1_29 - PDU data for UE
+91.23: PDU_1_29 terminated after processing
+92.60: UE1 generated 92.60: PDU_1_30 - PDU data for UE
+96.49: UE1 generated 96.49: PDU_1_31 - PDU data for UE
+100.95: UE1 generated 100.95: PDU_1_32 - PDU data for UE
+102.60: UE1 generated 102.60: PDU_1_33 - PDU data for UE
+104.97: UE1 generated 104.97: PDU_1_34 - PDU data for UE
+104.97: UE1 sending PDU requests to Compute Node
+104.97: Compute Node processing PDU requests
+104.97: UPF_PDU_1_30 assigned to process 92.60: PDU_1_30 - PDU data for UE
+104.97: UPF_PDU_1_30 processing 104.97: PDU_1_30 - PDU data for UE
+104.97: UPF_PDU_1_30 completed processing 104.97: PDU_1_30 - PDU data for UE
+104.97: PDU_1_30 terminated after processing
+104.97: UPF_PDU_1_31 assigned to process 96.49: PDU_1_31 - PDU data for UE
+104.97: UPF_PDU_1_31 processing 104.97: PDU_1_31 - PDU data for UE
+104.97: UPF_PDU_1_31 completed processing 104.97: PDU_1_31 - PDU data for UE
+104.97: PDU_1_31 terminated after processing
+104.97: UPF_PDU_1_32 assigned to process 100.95: PDU_1_32 - PDU data for UE
+104.97: UPF_PDU_1_32 processing 104.97: PDU_1_32 - PDU data for UE
+104.97: UPF_PDU_1_32 completed processing 104.97: PDU_1_32 - PDU data for UE
+104.97: PDU_1_32 terminated after processing
+104.97: UPF_PDU_1_33 assigned to process 102.60: PDU_1_33 - PDU data for UE
+104.97: UPF_PDU_1_33 processing 104.97: PDU_1_33 - PDU data for UE
+104.97: UPF_PDU_1_33 completed processing 104.97: PDU_1_33 - PDU data for UE
+104.97: PDU_1_33 terminated after processing
+104.97: UPF_PDU_1_34 assigned to process 104.97: PDU_1_34 - PDU data for UE
+104.97: UPF_PDU_1_34 processing 104.97: PDU_1_34 - PDU data for UE
+104.97: UPF_PDU_1_34 completed processing 104.97: PDU_1_34 - PDU data for UE
+104.97: PDU_1_34 terminated after processing
+109.06: UE1 generated 109.06: PDU_1_35 - PDU data for UE
+113.40: UE1 generated 113.40: PDU_1_36 - PDU data for UE
+116.04: UE1 generated 116.04: PDU_1_37 - PDU data for UE
+117.12: UE1 generated 117.12: PDU_1_38 - PDU data for UE
+119.64: UE1 generated 119.64: PDU_1_39 - PDU data for UE
+119.64: UE1 sending PDU requests to Compute Node
+119.64: Compute Node processing PDU requests
+119.64: UPF_PDU_1_35 assigned to process 109.06: PDU_1_35 - PDU data for UE
+119.64: UPF_PDU_1_35 processing 119.64: PDU_1_35 - PDU data for UE
+119.64: UPF_PDU_1_35 completed processing 119.64: PDU_1_35 - PDU data for UE
+119.64: PDU_1_35 terminated after processing
+119.64: UPF_PDU_1_36 assigned to process 113.40: PDU_1_36 - PDU data for UE
+119.64: UPF_PDU_1_36 processing 119.64: PDU_1_36 - PDU data for UE
+119.64: UPF_PDU_1_36 completed processing 119.64: PDU_1_36 - PDU data for UE
+119.64: PDU_1_36 terminated after processing
+119.64: UPF_PDU_1_37 assigned to process 116.04: PDU_1_37 - PDU data for UE
+119.64: UPF_PDU_1_37 processing 119.64: PDU_1_37 - PDU data for UE
+119.64: UPF_PDU_1_37 completed processing 119.64: PDU_1_37 - PDU data for UE
+119.64: PDU_1_37 terminated after processing
+119.64: UPF_PDU_1_38 assigned to process 117.12: PDU_1_38 - PDU data for UE
+119.64: UPF_PDU_1_38 processing 119.64: PDU_1_38 - PDU data for UE
+119.64: UPF_PDU_1_38 completed processing 119.64: PDU_1_38 - PDU data for UE
+119.64: PDU_1_38 terminated after processing
+119.64: UPF_PDU_1_39 assigned to process 119.64: PDU_1_39 - PDU data for UE
+119.64: UPF_PDU_1_39 processing 119.64: PDU_1_39 - PDU data for UE
+119.64: UPF_PDU_1_39 completed processing 119.64: PDU_1_39 - PDU data for UE
+119.64: PDU_1_39 terminated after processing
+122.84: UE1 generated 122.84: PDU_1_40 - PDU data for UE
+125.90: UE1 generated 125.90: PDU_1_41 - PDU data for UE
+128.05: UE1 generated 128.05: PDU_1_42 - PDU data for UE
+131.36: UE1 generated 131.36: PDU_1_43 - PDU data for UE
+132.63: UE1 generated 132.63: PDU_1_44 - PDU data for UE
+132.63: UE1 sending PDU requests to Compute Node
+132.63: Compute Node processing PDU requests
+132.63: UPF_PDU_1_40 assigned to process 122.84: PDU_1_40 - PDU data for UE
+132.63: UPF_PDU_1_40 processing 132.63: PDU_1_40 - PDU data for UE
+132.63: UPF_PDU_1_40 completed processing 132.63: PDU_1_40 - PDU data for UE
+132.63: PDU_1_40 terminated after processing
+132.63: UPF_PDU_1_41 assigned to process 125.90: PDU_1_41 - PDU data for UE
+132.63: UPF_PDU_1_41 processing 132.63: PDU_1_41 - PDU data for UE
+132.63: UPF_PDU_1_41 completed processing 132.63: PDU_1_41 - PDU data for UE
+132.63: PDU_1_41 terminated after processing
+132.63: UPF_PDU_1_42 assigned to process 128.05: PDU_1_42 - PDU data for UE
+132.63: UPF_PDU_1_42 processing 132.63: PDU_1_42 - PDU data for UE
+132.63: UPF_PDU_1_42 completed processing 132.63: PDU_1_42 - PDU data for UE
+132.63: PDU_1_42 terminated after processing
+132.63: UPF_PDU_1_43 assigned to process 131.36: PDU_1_43 - PDU data for UE
+132.63: UPF_PDU_1_43 processing 132.63: PDU_1_43 - PDU data for UE
+132.63: UPF_PDU_1_43 completed processing 132.63: PDU_1_43 - PDU data for UE
+132.63: PDU_1_43 terminated after processing
+132.63: UPF_PDU_1_44 assigned to process 132.63: PDU_1_44 - PDU data for UE
+132.63: UPF_PDU_1_44 processing 132.63: PDU_1_44 - PDU data for UE
+132.63: UPF_PDU_1_44 completed processing 132.63: PDU_1_44 - PDU data for UE
+132.63: PDU_1_44 terminated after processing
+135.99: UE1 generated 135.99: PDU_1_45 - PDU data for UE
+139.34: UE1 generated 139.34: PDU_1_46 - PDU data for UE
+141.03: UE1 generated 141.03: PDU_1_47 - PDU data for UE
+144.53: UE1 generated 144.53: PDU_1_48 - PDU data for UE
+147.32: UE1 generated 147.32: PDU_1_49 - PDU data for UE
+147.32: UE1 sending PDU requests to Compute Node
+147.32: Compute Node processing PDU requests
+147.32: UPF_PDU_1_45 assigned to process 135.99: PDU_1_45 - PDU data for UE
+147.32: UPF_PDU_1_45 processing 147.32: PDU_1_45 - PDU data for UE
+147.32: UPF_PDU_1_45 completed processing 147.32: PDU_1_45 - PDU data for UE
+147.32: PDU_1_45 terminated after processing
+147.32: UPF_PDU_1_46 assigned to process 139.34: PDU_1_46 - PDU data for UE
+147.32: UPF_PDU_1_46 processing 147.32: PDU_1_46 - PDU data for UE
+147.32: UPF_PDU_1_46 completed processing 147.32: PDU_1_46 - PDU data for UE
+147.32: PDU_1_46 terminated after processing
+147.32: UPF_PDU_1_47 assigned to process 141.03: PDU_1_47 - PDU data for UE
+147.32: UPF_PDU_1_47 processing 147.32: PDU_1_47 - PDU data for UE
+147.32: UPF_PDU_1_47 completed processing 147.32: PDU_1_47 - PDU data for UE
+147.32: PDU_1_47 terminated after processing
+147.32: UPF_PDU_1_48 assigned to process 144.53: PDU_1_48 - PDU data for UE
+147.32: UPF_PDU_1_48 processing 147.32: PDU_1_48 - PDU data for UE
+147.32: UPF_PDU_1_48 completed processing 147.32: PDU_1_48 - PDU data for UE
+147.32: PDU_1_48 terminated after processing
+147.32: UPF_PDU_1_49 assigned to process 147.32: PDU_1_49 - PDU data for UE
+147.32: UPF_PDU_1_49 processing 147.32: PDU_1_49 - PDU data for UE
+147.32: UPF_PDU_1_49 completed processing 147.32: PDU_1_49 - PDU data for UE
+147.32: PDU_1_49 terminated after processing
+148.78: UE1 generated 148.78: PDU_1_50 - PDU data for UE
+151.20: UE1 generated 151.20: PDU_1_51 - PDU data for UE
+153.20: UE1 generated 153.20: PDU_1_52 - PDU data for UE
+157.86: UE1 generated 157.86: PDU_1_53 - PDU data for UE
+161.08: UE1 generated 161.08: PDU_1_54 - PDU data for UE
+161.08: UE1 sending PDU requests to Compute Node
+161.08: Compute Node processing PDU requests
+161.08: UPF_PDU_1_50 assigned to process 148.78: PDU_1_50 - PDU data for UE
+161.08: UPF_PDU_1_50 processing 161.08: PDU_1_50 - PDU data for UE
+161.08: UPF_PDU_1_50 completed processing 161.08: PDU_1_50 - PDU data for UE
+161.08: PDU_1_50 terminated after processing
+161.08: UPF_PDU_1_51 assigned to process 151.20: PDU_1_51 - PDU data for UE
+161.08: UPF_PDU_1_51 processing 161.08: PDU_1_51 - PDU data for UE
+161.08: UPF_PDU_1_51 completed processing 161.08: PDU_1_51 - PDU data for UE
+161.08: PDU_1_51 terminated after processing
+161.08: UPF_PDU_1_52 assigned to process 153.20: PDU_1_52 - PDU data for UE
+161.08: UPF_PDU_1_52 processing 161.08: PDU_1_52 - PDU data for UE
+161.08: UPF_PDU_1_52 completed processing 161.08: PDU_1_52 - PDU data for UE
+161.08: PDU_1_52 terminated after processing
+161.08: UPF_PDU_1_53 assigned to process 157.86: PDU_1_53 - PDU data for UE
+161.08: UPF_PDU_1_53 processing 161.08: PDU_1_53 - PDU data for UE
+161.08: UPF_PDU_1_53 completed processing 161.08: PDU_1_53 - PDU data for UE
+161.08: PDU_1_53 terminated after processing
+161.08: UPF_PDU_1_54 assigned to process 161.08: PDU_1_54 - PDU data for UE
+161.08: UPF_PDU_1_54 processing 161.08: PDU_1_54 - PDU data for UE
+161.08: UPF_PDU_1_54 completed processing 161.08: PDU_1_54 - PDU data for UE
+161.08: PDU_1_54 terminated after processing
+165.87: UE1 generated 165.87: PDU_1_55 - PDU data for UE
+167.70: UE1 generated 167.70: PDU_1_56 - PDU data for UE
+169.24: UE1 generated 169.24: PDU_1_57 - PDU data for UE
+172.11: UE1 generated 172.11: PDU_1_58 - PDU data for UE
+173.14: UE1 generated 173.14: PDU_1_59 - PDU data for UE
+173.14: UE1 sending PDU requests to Compute Node
+173.14: Compute Node processing PDU requests
+173.14: UPF_PDU_1_55 assigned to process 165.87: PDU_1_55 - PDU data for UE
+173.14: UPF_PDU_1_55 processing 173.14: PDU_1_55 - PDU data for UE
+173.14: UPF_PDU_1_55 completed processing 173.14: PDU_1_55 - PDU data for UE
+173.14: PDU_1_55 terminated after processing
+173.14: UPF_PDU_1_56 assigned to process 167.70: PDU_1_56 - PDU data for UE
+173.14: UPF_PDU_1_56 processing 173.14: PDU_1_56 - PDU data for UE
+173.14: UPF_PDU_1_56 completed processing 173.14: PDU_1_56 - PDU data for UE
+173.14: PDU_1_56 terminated after processing
+173.14: UPF_PDU_1_57 assigned to process 169.24: PDU_1_57 - PDU data for UE
+173.14: UPF_PDU_1_57 processing 173.14: PDU_1_57 - PDU data for UE
+173.14: UPF_PDU_1_57 completed processing 173.14: PDU_1_57 - PDU data for UE
+173.14: PDU_1_57 terminated after processing
+173.14: UPF_PDU_1_58 assigned to process 172.11: PDU_1_58 - PDU data for UE
+173.14: UPF_PDU_1_58 processing 173.14: PDU_1_58 - PDU data for UE
+173.14: UPF_PDU_1_58 completed processing 173.14: PDU_1_58 - PDU data for UE
+173.14: PDU_1_58 terminated after processing
+173.14: UPF_PDU_1_59 assigned to process 173.14: PDU_1_59 - PDU data for UE
+173.14: UPF_PDU_1_59 processing 173.14: PDU_1_59 - PDU data for UE
+173.14: UPF_PDU_1_59 completed processing 173.14: PDU_1_59 - PDU data for UE
+173.14: PDU_1_59 terminated after processing
+178.09: UE1 generated 178.09: PDU_1_60 - PDU data for UE
+180.84: UE1 generated 180.84: PDU_1_61 - PDU data for UE
+185.61: UE1 generated 185.61: PDU_1_62 - PDU data for UE
+189.15: UE1 generated 189.15: PDU_1_63 - PDU data for UE
+191.70: UE1 generated 191.70: PDU_1_64 - PDU data for UE
+191.70: UE1 sending PDU requests to Compute Node
+191.70: Compute Node processing PDU requests
+191.70: UPF_PDU_1_60 assigned to process 178.09: PDU_1_60 - PDU data for UE
+191.70: UPF_PDU_1_60 processing 191.70: PDU_1_60 - PDU data for UE
+191.70: UPF_PDU_1_60 completed processing 191.70: PDU_1_60 - PDU data for UE
+191.70: PDU_1_60 terminated after processing
+191.70: UPF_PDU_1_61 assigned to process 180.84: PDU_1_61 - PDU data for UE
+191.70: UPF_PDU_1_61 processing 191.70: PDU_1_61 - PDU data for UE
+191.70: UPF_PDU_1_61 completed processing 191.70: PDU_1_61 - PDU data for UE
+191.70: PDU_1_61 terminated after processing
+191.70: UPF_PDU_1_62 assigned to process 185.61: PDU_1_62 - PDU data for UE
+191.70: UPF_PDU_1_62 processing 191.70: PDU_1_62 - PDU data for UE
+191.70: UPF_PDU_1_62 completed processing 191.70: PDU_1_62 - PDU data for UE
+191.70: PDU_1_62 terminated after processing
+191.70: UPF_PDU_1_63 assigned to process 189.15: PDU_1_63 - PDU data for UE
+191.70: UPF_PDU_1_63 processing 191.70: PDU_1_63 - PDU data for UE
+191.70: UPF_PDU_1_63 completed processing 191.70: PDU_1_63 - PDU data for UE
+191.70: PDU_1_63 terminated after processing
+191.70: UPF_PDU_1_64 assigned to process 191.70: PDU_1_64 - PDU data for UE
+191.70: UPF_PDU_1_64 processing 191.70: PDU_1_64 - PDU data for UE
+191.70: UPF_PDU_1_64 completed processing 191.70: PDU_1_64 - PDU data for UE
+191.70: PDU_1_64 terminated after processing
+193.46: UE1 generated 193.46: PDU_1_65 - PDU data for UE
+196.30: UE1 generated 196.30: PDU_1_66 - PDU data for UE
+200.03: UE1 generated 200.03: PDU_1_67 - PDU data for UE
+203.21: UE1 generated 203.21: PDU_1_68 - PDU data for UE
+204.43: UE1 generated 204.43: PDU_1_69 - PDU data for UE
+204.43: UE1 sending PDU requests to Compute Node
+204.43: Compute Node processing PDU requests
+204.43: UPF_PDU_1_65 assigned to process 193.46: PDU_1_65 - PDU data for UE
+204.43: UPF_PDU_1_65 processing 204.43: PDU_1_65 - PDU data for UE
+204.43: UPF_PDU_1_65 completed processing 204.43: PDU_1_65 - PDU data for UE
+204.43: PDU_1_65 terminated after processing
+204.43: UPF_PDU_1_66 assigned to process 196.30: PDU_1_66 - PDU data for UE
+204.43: UPF_PDU_1_66 processing 204.43: PDU_1_66 - PDU data for UE
+204.43: UPF_PDU_1_66 completed processing 204.43: PDU_1_66 - PDU data for UE
+204.43: PDU_1_66 terminated after processing
+204.43: UPF_PDU_1_67 assigned to process 200.03: PDU_1_67 - PDU data for UE
+204.43: UPF_PDU_1_67 processing 204.43: PDU_1_67 - PDU data for UE
+204.43: UPF_PDU_1_67 completed processing 204.43: PDU_1_67 - PDU data for UE
+204.43: PDU_1_67 terminated after processing
+204.43: UPF_PDU_1_68 assigned to process 203.21: PDU_1_68 - PDU data for UE
+204.43: UPF_PDU_1_68 processing 204.43: PDU_1_68 - PDU data for UE
+204.43: UPF_PDU_1_68 completed processing 204.43: PDU_1_68 - PDU data for UE
+204.43: PDU_1_68 terminated after processing
+204.43: UPF_PDU_1_69 assigned to process 204.43: PDU_1_69 - PDU data for UE
+204.43: UPF_PDU_1_69 processing 204.43: PDU_1_69 - PDU data for UE
+204.43: UPF_PDU_1_69 completed processing 204.43: PDU_1_69 - PDU data for UE
+204.43: PDU_1_69 terminated after processing
+206.14: UE1 generated 206.14: PDU_1_70 - PDU data for UE
+210.05: UE1 generated 210.05: PDU_1_71 - PDU data for UE
+214.33: UE1 generated 214.33: PDU_1_72 - PDU data for UE
+218.12: UE1 generated 218.12: PDU_1_73 - PDU data for UE
+220.13: UE1 generated 220.13: PDU_1_74 - PDU data for UE
+220.13: UE1 sending PDU requests to Compute Node
+220.13: Compute Node processing PDU requests
+220.13: UPF_PDU_1_70 assigned to process 206.14: PDU_1_70 - PDU data for UE
+220.13: UPF_PDU_1_70 processing 220.13: PDU_1_70 - PDU data for UE
+220.13: UPF_PDU_1_70 completed processing 220.13: PDU_1_70 - PDU data for UE
+220.13: PDU_1_70 terminated after processing
+220.13: UPF_PDU_1_71 assigned to process 210.05: PDU_1_71 - PDU data for UE
+220.13: UPF_PDU_1_71 processing 220.13: PDU_1_71 - PDU data for UE
+220.13: UPF_PDU_1_71 completed processing 220.13: PDU_1_71 - PDU data for UE
+220.13: PDU_1_71 terminated after processing
+220.13: UPF_PDU_1_72 assigned to process 214.33: PDU_1_72 - PDU data for UE
+220.13: UPF_PDU_1_72 processing 220.13: PDU_1_72 - PDU data for UE
+220.13: UPF_PDU_1_72 completed processing 220.13: PDU_1_72 - PDU data for UE
+220.13: PDU_1_72 terminated after processing
+220.13: UPF_PDU_1_73 assigned to process 218.12: PDU_1_73 - PDU data for UE
+220.13: UPF_PDU_1_73 processing 220.13: PDU_1_73 - PDU data for UE
+220.13: UPF_PDU_1_73 completed processing 220.13: PDU_1_73 - PDU data for UE
+220.13: PDU_1_73 terminated after processing
+220.13: UPF_PDU_1_74 assigned to process 220.13: PDU_1_74 - PDU data for UE
+220.13: UPF_PDU_1_74 processing 220.13: PDU_1_74 - PDU data for UE
+220.13: UPF_PDU_1_74 completed processing 220.13: PDU_1_74 - PDU data for UE
+220.13: PDU_1_74 terminated after processing
+221.73: UE1 generated 221.73: PDU_1_75 - PDU data for UE
+225.76: UE1 generated 225.76: PDU_1_76 - PDU data for UE
+229.99: UE1 generated 229.99: PDU_1_77 - PDU data for UE
+231.75: UE1 generated 231.75: PDU_1_78 - PDU data for UE
+236.70: UE1 generated 236.70: PDU_1_79 - PDU data for UE
+236.70: UE1 sending PDU requests to Compute Node
+236.70: Compute Node processing PDU requests
+236.70: UPF_PDU_1_75 assigned to process 221.73: PDU_1_75 - PDU data for UE
+236.70: UPF_PDU_1_75 processing 236.70: PDU_1_75 - PDU data for UE
+236.70: UPF_PDU_1_75 completed processing 236.70: PDU_1_75 - PDU data for UE
+236.70: PDU_1_75 terminated after processing
+236.70: UPF_PDU_1_76 assigned to process 225.76: PDU_1_76 - PDU data for UE
+236.70: UPF_PDU_1_76 processing 236.70: PDU_1_76 - PDU data for UE
+236.70: UPF_PDU_1_76 completed processing 236.70: PDU_1_76 - PDU data for UE
+236.70: PDU_1_76 terminated after processing
+236.70: UPF_PDU_1_77 assigned to process 229.99: PDU_1_77 - PDU data for UE
+236.70: UPF_PDU_1_77 processing 236.70: PDU_1_77 - PDU data for UE
+236.70: UPF_PDU_1_77 completed processing 236.70: PDU_1_77 - PDU data for UE
+236.70: PDU_1_77 terminated after processing
+236.70: UPF_PDU_1_78 assigned to process 231.75: PDU_1_78 - PDU data for UE
+236.70: UPF_PDU_1_78 processing 236.70: PDU_1_78 - PDU data for UE
+236.70: UPF_PDU_1_78 completed processing 236.70: PDU_1_78 - PDU data for UE
+236.70: PDU_1_78 terminated after processing
+236.70: UPF_PDU_1_79 assigned to process 236.70: PDU_1_79 - PDU data for UE
+236.70: UPF_PDU_1_79 processing 236.70: PDU_1_79 - PDU data for UE
+236.70: UPF_PDU_1_79 completed processing 236.70: PDU_1_79 - PDU data for UE
+236.70: PDU_1_79 terminated after processing
+238.18: UE1 generated 238.18: PDU_1_80 - PDU data for UE
+243.08: UE1 generated 243.08: PDU_1_81 - PDU data for UE
+244.81: UE1 generated 244.81: PDU_1_82 - PDU data for UE
+249.30: UE1 generated 249.30: PDU_1_83 - PDU data for UE
+251.04: UE1 generated 251.04: PDU_1_84 - PDU data for UE
+251.04: UE1 sending PDU requests to Compute Node
+251.04: Compute Node processing PDU requests
+251.04: UPF_PDU_1_80 assigned to process 238.18: PDU_1_80 - PDU data for UE
+251.04: UPF_PDU_1_80 processing 251.04: PDU_1_80 - PDU data for UE
+251.04: UPF_PDU_1_80 completed processing 251.04: PDU_1_80 - PDU data for UE
+251.04: PDU_1_80 terminated after processing
+251.04: UPF_PDU_1_81 assigned to process 243.08: PDU_1_81 - PDU data for UE
+251.04: UPF_PDU_1_81 processing 251.04: PDU_1_81 - PDU data for UE
+251.04: UPF_PDU_1_81 completed processing 251.04: PDU_1_81 - PDU data for UE
+251.04: PDU_1_81 terminated after processing
+251.04: UPF_PDU_1_82 assigned to process 244.81: PDU_1_82 - PDU data for UE
+251.04: UPF_PDU_1_82 processing 251.04: PDU_1_82 - PDU data for UE
+251.04: UPF_PDU_1_82 completed processing 251.04: PDU_1_82 - PDU data for UE
+251.04: PDU_1_82 terminated after processing
+251.04: UPF_PDU_1_83 assigned to process 249.30: PDU_1_83 - PDU data for UE
+251.04: UPF_PDU_1_83 processing 251.04: PDU_1_83 - PDU data for UE
+251.04: UPF_PDU_1_83 completed processing 251.04: PDU_1_83 - PDU data for UE
+251.04: PDU_1_83 terminated after processing
+251.04: UPF_PDU_1_84 assigned to process 251.04: PDU_1_84 - PDU data for UE
+251.04: UPF_PDU_1_84 processing 251.04: PDU_1_84 - PDU data for UE
+251.04: UPF_PDU_1_84 completed processing 251.04: PDU_1_84 - PDU data for UE
+251.04: PDU_1_84 terminated after processing
+253.25: UE1 generated 253.25: PDU_1_85 - PDU data for UE
+255.09: UE1 generated 255.09: PDU_1_86 - PDU data for UE
+258.95: UE1 generated 258.95: PDU_1_87 - PDU data for UE
+263.03: UE1 generated 263.03: PDU_1_88 - PDU data for UE
+265.67: UE1 generated 265.67: PDU_1_89 - PDU data for UE
+265.67: UE1 sending PDU requests to Compute Node
+265.67: Compute Node processing PDU requests
+265.67: UPF_PDU_1_85 assigned to process 253.25: PDU_1_85 - PDU data for UE
+265.67: UPF_PDU_1_85 processing 265.67: PDU_1_85 - PDU data for UE
+265.67: UPF_PDU_1_85 completed processing 265.67: PDU_1_85 - PDU data for UE
+265.67: PDU_1_85 terminated after processing
+265.67: UPF_PDU_1_86 assigned to process 255.09: PDU_1_86 - PDU data for UE
+265.67: UPF_PDU_1_86 processing 265.67: PDU_1_86 - PDU data for UE
+265.67: UPF_PDU_1_86 completed processing 265.67: PDU_1_86 - PDU data for UE
+265.67: PDU_1_86 terminated after processing
+265.67: UPF_PDU_1_87 assigned to process 258.95: PDU_1_87 - PDU data for UE
+265.67: UPF_PDU_1_87 processing 265.67: PDU_1_87 - PDU data for UE
+265.67: UPF_PDU_1_87 completed processing 265.67: PDU_1_87 - PDU data for UE
+265.67: PDU_1_87 terminated after processing
+265.67: UPF_PDU_1_88 assigned to process 263.03: PDU_1_88 - PDU data for UE
+265.67: UPF_PDU_1_88 processing 265.67: PDU_1_88 - PDU data for UE
+265.67: UPF_PDU_1_88 completed processing 265.67: PDU_1_88 - PDU data for UE
+265.67: PDU_1_88 terminated after processing
+265.67: UPF_PDU_1_89 assigned to process 265.67: PDU_1_89 - PDU data for UE
+265.67: UPF_PDU_1_89 processing 265.67: PDU_1_89 - PDU data for UE
+265.67: UPF_PDU_1_89 completed processing 265.67: PDU_1_89 - PDU data for UE
+265.67: PDU_1_89 terminated after processing
+266.97: UE1 generated 266.97: PDU_1_90 - PDU data for UE
+268.34: UE1 generated 268.34: PDU_1_91 - PDU data for UE
+270.90: UE1 generated 270.90: PDU_1_92 - PDU data for UE
+273.69: UE1 generated 273.69: PDU_1_93 - PDU data for UE
+276.68: UE1 generated 276.68: PDU_1_94 - PDU data for UE
+276.68: UE1 sending PDU requests to Compute Node
+276.68: Compute Node processing PDU requests
+276.68: UPF_PDU_1_90 assigned to process 266.97: PDU_1_90 - PDU data for UE
+276.68: UPF_PDU_1_90 processing 276.68: PDU_1_90 - PDU data for UE
+276.68: UPF_PDU_1_90 completed processing 276.68: PDU_1_90 - PDU data for UE
+276.68: PDU_1_90 terminated after processing
+276.68: UPF_PDU_1_91 assigned to process 268.34: PDU_1_91 - PDU data for UE
+276.68: UPF_PDU_1_91 processing 276.68: PDU_1_91 - PDU data for UE
+276.68: UPF_PDU_1_91 completed processing 276.68: PDU_1_91 - PDU data for UE
+276.68: PDU_1_91 terminated after processing
+276.68: UPF_PDU_1_92 assigned to process 270.90: PDU_1_92 - PDU data for UE
+276.68: UPF_PDU_1_92 processing 276.68: PDU_1_92 - PDU data for UE
+276.68: UPF_PDU_1_92 completed processing 276.68: PDU_1_92 - PDU data for UE
+276.68: PDU_1_92 terminated after processing
+276.68: UPF_PDU_1_93 assigned to process 273.69: PDU_1_93 - PDU data for UE
+276.68: UPF_PDU_1_93 processing 276.68: PDU_1_93 - PDU data for UE
+276.68: UPF_PDU_1_93 completed processing 276.68: PDU_1_93 - PDU data for UE
+276.68: PDU_1_93 terminated after processing
+276.68: UPF_PDU_1_94 assigned to process 276.68: PDU_1_94 - PDU data for UE
+276.68: UPF_PDU_1_94 processing 276.68: PDU_1_94 - PDU data for UE
+276.68: UPF_PDU_1_94 completed processing 276.68: PDU_1_94 - PDU data for UE
+276.68: PDU_1_94 terminated after processing
+280.11: UE1 generated 280.11: PDU_1_95 - PDU data for UE
+283.53: UE1 generated 283.53: PDU_1_96 - PDU data for UE
+288.33: UE1 generated 288.33: PDU_1_97 - PDU data for UE
+291.77: UE1 generated 291.77: PDU_1_98 - PDU data for UE
+296.28: UE1 generated 296.28: PDU_1_99 - PDU data for UE
+296.28: UE1 sending PDU requests to Compute Node
+296.28: Compute Node processing PDU requests
+296.28: UPF_PDU_1_95 assigned to process 280.11: PDU_1_95 - PDU data for UE
+296.28: UPF_PDU_1_95 processing 296.28: PDU_1_95 - PDU data for UE
+296.28: UPF_PDU_1_95 completed processing 296.28: PDU_1_95 - PDU data for UE
+296.28: PDU_1_95 terminated after processing
+296.28: UPF_PDU_1_96 assigned to process 283.53: PDU_1_96 - PDU data for UE
+296.28: UPF_PDU_1_96 processing 296.28: PDU_1_96 - PDU data for UE
+296.28: UPF_PDU_1_96 completed processing 296.28: PDU_1_96 - PDU data for UE
+296.28: PDU_1_96 terminated after processing
+296.28: UPF_PDU_1_97 assigned to process 288.33: PDU_1_97 - PDU data for UE
+296.28: UPF_PDU_1_97 processing 296.28: PDU_1_97 - PDU data for UE
+296.28: UPF_PDU_1_97 completed processing 296.28: PDU_1_97 - PDU data for UE
+296.28: PDU_1_97 terminated after processing
+296.28: UPF_PDU_1_98 assigned to process 291.77: PDU_1_98 - PDU data for UE
+296.28: UPF_PDU_1_98 processing 296.28: PDU_1_98 - PDU data for UE
+296.28: UPF_PDU_1_98 completed processing 296.28: PDU_1_98 - PDU data for UE
+296.28: PDU_1_98 terminated after processing
+296.28: UPF_PDU_1_99 assigned to process 296.28: PDU_1_99 - PDU data for UE
+296.28: UPF_PDU_1_99 processing 296.28: PDU_1_99 - PDU data for UE
+296.28: UPF_PDU_1_99 completed processing 296.28: PDU_1_99 - PDU data for UE
+296.28: PDU_1_99 terminated after processing

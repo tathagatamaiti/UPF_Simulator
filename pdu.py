@@ -1,8 +1,10 @@
+
 class PDU:
-    def __init__(self, ue_id, pdu_data, counter):
+    def __init__(self, ue_id, pdu_data, counter, duration):
         self.ue_id = ue_id
         self.pdu_data = pdu_data
         self.counter = counter
+        self.duration = duration
         self.start_time = None
         self.upf = None
 
@@ -12,8 +14,13 @@ class PDU:
     def associate_upf(self, upf):
         self.upf = upf
 
-    def terminate_pdu(self, event_manager, simulation_clock):
-        event_manager.schedule_event(simulation_clock, f"{self.generate_pdu_id()} terminated after processing")
+    def terminate_pdu(self):
+        with open("output.txt", "a") as file:
+            print(f"{self.start_time:.2f}: {self.generate_pdu_id()} terminated after processing", file=file)
 
     def __str__(self):
-        return f"{self.start_time:.2f}: {self.generate_pdu_id()} - {self.pdu_data}"
+        if self.start_time is not None:
+            return (f"{self.start_time:.2f}: {self.generate_pdu_id()} - {self.pdu_data} (Duration: {self.duration}"
+                    f" seconds)")
+        else:
+            return f"{self.generate_pdu_id()} - {self.pdu_data} (Duration: {self.duration} seconds)"

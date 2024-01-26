@@ -3,8 +3,8 @@ from compute_node import ComputeNode
 from event_manager import EventManager
 
 # Set the threshold for PDU session generation and processing
-threshold = 3
-pdu_limit = 50
+threshold = 2
+pdu_limit = 10
 
 # Create instances of ComputeNode, UE, and EventManager
 event_manager = EventManager()

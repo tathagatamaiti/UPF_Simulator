@@ -1,5 +1,6 @@
 from upf import UPF
 
+
 class ComputeNode:
     def __init__(self, event_manager):
         self.upfs = []
@@ -22,7 +23,8 @@ class ComputeNode:
             pdu_session = ue.pdu_queue.pop(0)
             new_upf = self.generate_upf(pdu_session)
 
-            description = f"{simulation_clock:.2f}: {new_upf.upf_id} assigned to process {pdu_session.generate_pdu_id()}"
+            description = (f"{simulation_clock:.2f}: {new_upf.upf_id} assigned to process "
+                           f"{pdu_session.generate_pdu_id()}")
             event_manager.schedule_event(simulation_clock, description)
 
             new_upf.process_pdu(pdu_session, simulation_clock, event_manager)

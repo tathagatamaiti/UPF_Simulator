@@ -1,5 +1,6 @@
 import heapq
 
+
 class EventManager:
     def __init__(self, output_file='output.txt'):
         self.event_queue = []

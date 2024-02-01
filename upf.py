@@ -1,3 +1,7 @@
+from event import Event
+from events import Events
+
+
 class UPF:
     def __init__(self, upf_id):
         self.upf_id = upf_id
@@ -8,14 +12,17 @@ class UPF:
         pdu_session.associate_upf(self)
 
         description = f"{simulation_clock:.2f}: {self.upf_id} processing {pdu_session.generate_pdu_id()}"
-        event_manager.schedule_event(simulation_clock, description)
+        event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
+        event_manager.schedule_event(event)
 
         description = f"{simulation_clock:.2f}: {self.upf_id} completed processing {pdu_session.generate_pdu_id()}"
-        event_manager.schedule_event(simulation_clock, description)
+        event = Event(simulation_clock, Events.PDU_SESSION_TERMINATE, description)
+        event_manager.schedule_event(event)
 
-        pdu_session.terminate_pdu()
+        pdu_session.terminate_pdu(simulation_clock, event_manager)
         self.terminate_upf(simulation_clock, event_manager)
 
     def terminate_upf(self, simulation_clock, event_manager):
         description = f"{simulation_clock:.2f}: {self.upf_id} terminated"
-        event_manager.schedule_event(simulation_clock, description)
+        event = Event(simulation_clock, Events.UPF_TERMINATE, description)
+        event_manager.schedule_event(event)

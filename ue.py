@@ -1,37 +1,45 @@
 import random
 from pdu import PDU
+from event import Event
+from events import Events
 
 
 class UE:
-    def __init__(self, compute_node, threshold, pdu_limit):
+    def __init__(self, compute_node, pdu_limit, event_manager):
         self.ue_id = 1
         self.compute_node = compute_node
-        self.threshold = threshold
         self.pdu_counter = 0
         self.pdu_limit = pdu_limit
         self.pdu_queue = []
+        self.event_manager = event_manager
 
     def generate_pdu_sessions(self, simulation_clock, event_manager):
-        for _ in range(self.threshold - 1):
-            pdu_data = f"PDU data for UE"
-            pdu_duration = 5
-            pdu_session = PDU(self.ue_id, pdu_data, self.pdu_counter, pdu_duration)
-            pdu_session.start_time = simulation_clock
-            description = f"UE{self.ue_id} generated {pdu_session}"
-            event_manager.schedule_event(simulation_clock, description)
+        pdu_data = f"PDU data for UE"
+        pdu_duration = 5
+        pdu_session = PDU(self.ue_id, pdu_data, self.pdu_counter, pdu_duration)
+        pdu_session.start_time = simulation_clock
+        description = f"UE{self.ue_id} generates PDU session: {pdu_session}"
+        event = Event(simulation_clock, Events.UE_GENERATE_PDU_SESSION, description)
+        event_manager.schedule_event(event)
 
-            self.pdu_counter += 1
+        self.pdu_counter += 1
 
-            # Introduce a random delay between the creation of PDU sessions
-            delay = random.uniform(1.0, 5.0)
-            simulation_clock += delay
+        # Introduce a random delay between the creation of PDU sessions
+        delay = random.uniform(1.0, 5.0)
+        simulation_clock += delay
 
-            # Add the generated PDU session to the queue
-            self.pdu_queue.append(pdu_session)
+        # Add the generated PDU session to the queue
+        self.pdu_queue.append(pdu_session)
 
-        # Send PDU request message for the generated PDU sessions
-        description = f"UE{self.ue_id} sending PDU requests to Compute Node"
-        event_manager.schedule_event(simulation_clock, description)
+        # Send PDU request message for the generated PDU session
+        description = f"UE{self.ue_id} sending PDU request to Compute Node"
+        event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
+        event_manager.schedule_event(event)
+
+        description = f"UE{self.ue_id} sends PDU request to Compute Node"
+        event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
+        event_manager.schedule_event(event)
+
         self.compute_node.process_pdu_requests(self, simulation_clock, event_manager)
 
         return self.pdu_counter < self.pdu_limit

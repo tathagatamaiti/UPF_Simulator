@@ -3,13 +3,12 @@ from compute_node import ComputeNode
 from event_manager import EventManager
 
 # Set the threshold for PDU session generation and processing
-threshold = 2
 pdu_limit = 10
 
 # Create instances of ComputeNode, UE, and EventManager
 event_manager = EventManager()
 compute_node = ComputeNode(event_manager)
-ue = UE(compute_node, threshold, pdu_limit)
+ue = UE(compute_node, pdu_limit, event_manager)
 
 # Register UE with the ComputeNode
 compute_node.add_upf(ue)

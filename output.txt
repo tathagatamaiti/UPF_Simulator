@@ -1,61 +1,72 @@
-UE1 generated 0.00: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
-UE1 generated 0.00: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
-1.43: Compute Node processing PDU requests
-1.43: UPF_PDU_1_8 assigned to process PDU_1_8
-1.43: UPF_PDU_1_8 completed processing PDU_1_8
-1.43: UPF_PDU_1_8 processing PDU_1_8
-1.43: UPF_PDU_1_8 terminated
-1.58: Compute Node processing PDU requests
-1.58: UPF_PDU_1_0 assigned to process PDU_1_0
-1.58: UPF_PDU_1_0 completed processing PDU_1_0
-1.58: UPF_PDU_1_0 processing PDU_1_0
-1.58: UPF_PDU_1_0 terminated
-UE1 sending PDU requests to Compute Node
-2.37: Compute Node processing PDU requests
-2.37: UPF_PDU_1_9 assigned to process PDU_1_9
-2.37: UPF_PDU_1_9 completed processing PDU_1_9
-2.37: UPF_PDU_1_9 processing PDU_1_9
-2.37: UPF_PDU_1_9 terminated
-2.46: Compute Node processing PDU requests
-2.46: UPF_PDU_1_3 assigned to process PDU_1_3
-2.46: UPF_PDU_1_3 completed processing PDU_1_3
-2.46: UPF_PDU_1_3 processing PDU_1_3
-2.46: UPF_PDU_1_3 terminated
-2.56: Compute Node processing PDU requests
-2.56: UPF_PDU_1_5 assigned to process PDU_1_5
-2.56: UPF_PDU_1_5 completed processing PDU_1_5
-2.56: UPF_PDU_1_5 processing PDU_1_5
-2.56: UPF_PDU_1_5 terminated
-2.63: Compute Node processing PDU requests
-2.63: UPF_PDU_1_1 assigned to process PDU_1_1
-2.63: UPF_PDU_1_1 completed processing PDU_1_1
-2.63: UPF_PDU_1_1 processing PDU_1_1
-2.63: UPF_PDU_1_1 terminated
-3.17: Compute Node processing PDU requests
-3.17: UPF_PDU_1_6 assigned to process PDU_1_6
-3.17: UPF_PDU_1_6 completed processing PDU_1_6
-3.17: UPF_PDU_1_6 processing PDU_1_6
-3.17: UPF_PDU_1_6 terminated
-3.88: Compute Node processing PDU requests
-3.88: UPF_PDU_1_4 assigned to process PDU_1_4
-3.88: UPF_PDU_1_4 completed processing PDU_1_4
-3.88: UPF_PDU_1_4 processing PDU_1_4
-3.88: UPF_PDU_1_4 terminated
-4.23: Compute Node processing PDU requests
-4.23: UPF_PDU_1_7 assigned to process PDU_1_7
-4.23: UPF_PDU_1_7 completed processing PDU_1_7
-4.23: UPF_PDU_1_7 processing PDU_1_7
-4.23: UPF_PDU_1_7 terminated
-4.59: Compute Node processing PDU requests
-4.59: UPF_PDU_1_2 assigned to process PDU_1_2
-4.59: UPF_PDU_1_2 completed processing PDU_1_2
-4.59: UPF_PDU_1_2 processing PDU_1_2
-4.59: UPF_PDU_1_2 terminated
+0.00: UE1 generates PDU session: 0.00: PDU_1_0 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_0
+0.00: UE1 generates PDU session: 0.00: PDU_1_1 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_1
+0.00: UE1 generates PDU session: 0.00: PDU_1_2 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_2
+0.00: UE1 generates PDU session: 0.00: PDU_1_3 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_3
+0.00: UE1 generates PDU session: 0.00: PDU_1_4 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_4
+0.00: UE1 generates PDU session: 0.00: PDU_1_5 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_5
+0.00: UE1 generates PDU session: 0.00: PDU_1_6 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_6
+0.00: UE1 generates PDU session: 0.00: PDU_1_7 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_7
+0.00: UE1 generates PDU session: 0.00: PDU_1_8 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_8
+0.00: UE1 generates PDU session: 0.00: PDU_1_9 - PDU data for UE (Duration: 5 seconds)
+0.00: Compute Node allocated UPF for PDU session: UPF_PDU_1_9
+1.02: 1.02: Compute Node processing PDU requests
+1.02: 1.02: UPF_PDU_1_8 assigned to process PDU_1_8
+1.02: 1.02: UPF_PDU_1_8 processing PDU_1_8
+1.02: 1.02: UPF_PDU_1_8 completed processing PDU_1_8
+1.02: 1.02: UPF_PDU_1_8 terminated
+1.68: 1.68: Compute Node processing PDU requests
+1.68: 1.68: UPF_PDU_1_9 assigned to process PDU_1_9
+1.68: 1.68: UPF_PDU_1_9 processing PDU_1_9
+1.68: 1.68: UPF_PDU_1_9 completed processing PDU_1_9
+1.68: 1.68: UPF_PDU_1_9 terminated
+1.82: 1.82: Compute Node processing PDU requests
+1.82: 1.82: UPF_PDU_1_6 assigned to process PDU_1_6
+1.82: 1.82: UPF_PDU_1_6 processing PDU_1_6
+1.82: 1.82: UPF_PDU_1_6 completed processing PDU_1_6
+1.82: 1.82: UPF_PDU_1_6 terminated
+2.82: 2.82: Compute Node processing PDU requests
+2.82: 2.82: UPF_PDU_1_1 assigned to process PDU_1_1
+2.82: 2.82: UPF_PDU_1_1 processing PDU_1_1
+2.82: 2.82: UPF_PDU_1_1 completed processing PDU_1_1
+2.82: 2.82: UPF_PDU_1_1 terminated
+2.92: 2.92: Compute Node processing PDU requests
+2.92: 2.92: UPF_PDU_1_5 assigned to process PDU_1_5
+2.92: 2.92: UPF_PDU_1_5 processing PDU_1_5
+2.92: 2.92: UPF_PDU_1_5 completed processing PDU_1_5
+2.92: 2.92: UPF_PDU_1_5 terminated
+3.16: 3.16: Compute Node processing PDU requests
+3.16: 3.16: UPF_PDU_1_7 assigned to process PDU_1_7
+3.16: 3.16: UPF_PDU_1_7 processing PDU_1_7
+3.16: 3.16: UPF_PDU_1_7 completed processing PDU_1_7
+3.16: 3.16: UPF_PDU_1_7 terminated
+4.20: UE1 sending PDU request to Compute Node
+4.20: UE1 sends PDU request to Compute Node
+4.20: 4.20: Compute Node processing PDU requests
+4.20: 4.20: UPF_PDU_1_0 assigned to process PDU_1_0
+4.20: 4.20: UPF_PDU_1_0 processing PDU_1_0
+4.20: 4.20: UPF_PDU_1_0 completed processing PDU_1_0
+4.20: 4.20: UPF_PDU_1_0 terminated
+4.30: 4.30: Compute Node processing PDU requests
+4.30: 4.30: UPF_PDU_1_3 assigned to process PDU_1_3
+4.30: 4.30: UPF_PDU_1_3 processing PDU_1_3
+4.30: 4.30: UPF_PDU_1_3 completed processing PDU_1_3
+4.30: 4.30: UPF_PDU_1_3 terminated
+4.35: 4.35: Compute Node processing PDU requests
+4.35: 4.35: UPF_PDU_1_2 assigned to process PDU_1_2
+4.35: 4.35: UPF_PDU_1_2 processing PDU_1_2
+4.35: 4.35: UPF_PDU_1_2 completed processing PDU_1_2
+4.35: 4.35: UPF_PDU_1_2 terminated
+4.43: 4.43: Compute Node processing PDU requests
+4.43: 4.43: UPF_PDU_1_4 assigned to process PDU_1_4
+4.43: 4.43: UPF_PDU_1_4 processing PDU_1_4
+4.43: 4.43: UPF_PDU_1_4 completed processing PDU_1_4
+4.43: 4.43: UPF_PDU_1_4 terminated

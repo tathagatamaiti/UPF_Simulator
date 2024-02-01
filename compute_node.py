@@ -1,4 +1,6 @@
 from upf import UPF
+from event import Event
+from events import Events
 
 
 class ComputeNode:
@@ -13,11 +15,17 @@ class ComputeNode:
         new_upf_id = f"UPF_{pdu_session.generate_pdu_id()}"
         new_upf = UPF(new_upf_id)
         self.add_upf(new_upf)
+
+        description = f"Compute Node allocated UPF for PDU session: {new_upf.upf_id}"
+        event = Event(self.event_manager.get_simulation_clock(), Events.COMPUTE_NODE_ALLOCATE_UPF, description)
+        self.event_manager.schedule_event(event)
+
         return new_upf
 
     def process_pdu_requests(self, ue, simulation_clock, event_manager):
         description = f"{simulation_clock:.2f}: Compute Node processing PDU requests"
-        event_manager.schedule_event(simulation_clock, description)
+        event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
+        event_manager.schedule_event(event)
 
         while ue.pdu_queue:
             pdu_session = ue.pdu_queue.pop(0)
@@ -25,6 +33,7 @@ class ComputeNode:
 
             description = (f"{simulation_clock:.2f}: {new_upf.upf_id} assigned to process "
                            f"{pdu_session.generate_pdu_id()}")
-            event_manager.schedule_event(simulation_clock, description)
+            event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
+            event_manager.schedule_event(event)
 
             new_upf.process_pdu(pdu_session, simulation_clock, event_manager)

@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (UPF_Sim)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (UPF_Sim)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (UPF_Simulator)" project-jdk-type="Python SDK" />
 </project>

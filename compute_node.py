@@ -23,15 +23,11 @@ class ComputeNode:
         return new_upf
 
     def process_pdu_requests(self, ue, simulation_clock, event_manager):
-        description = f"{simulation_clock:.2f}: Compute Node processing PDU requests"
-        event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
-        event_manager.schedule_event(event)
-
         while ue.pdu_queue:
             pdu_session = ue.pdu_queue.pop(0)
             new_upf = self.generate_upf(pdu_session)
 
-            description = (f"{simulation_clock:.2f}: {new_upf.upf_id} assigned to process "
+            description = (f"{new_upf.upf_id} assigned to process "
                            f"{pdu_session.generate_pdu_id()}")
             event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
             event_manager.schedule_event(event)

@@ -1,3 +1,7 @@
+from event import Event
+from events import Events
+
+
 class PDU:
     def __init__(self, ue_id, pdu_data, counter, duration):
         self.ue_id = ue_id
@@ -14,8 +18,9 @@ class PDU:
         self.upf = upf
 
     def terminate_pdu(self, simulation_clock, event_manager):
-        with open("output.txt", "a") as file:
-            print(f"{simulation_clock:.2f}: {self.generate_pdu_id()} terminated after processing", file=file)
+        description = f"{self.generate_pdu_id()} terminated"
+        event = Event(simulation_clock, Events.PDU_SESSION_TERMINATE, description)
+        event_manager.schedule_event(event)
 
     def __str__(self):
         if self.start_time is not None:

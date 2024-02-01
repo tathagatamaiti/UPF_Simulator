@@ -11,11 +11,11 @@ class UPF:
         pdu_session.start_time = simulation_clock
         pdu_session.associate_upf(self)
 
-        description = f"{simulation_clock:.2f}: {self.upf_id} processing {pdu_session.generate_pdu_id()}"
+        description = f"{self.upf_id} processing {pdu_session.generate_pdu_id()}"
         event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
         event_manager.schedule_event(event)
 
-        description = f"{simulation_clock:.2f}: {self.upf_id} completed processing {pdu_session.generate_pdu_id()}"
+        description = f"{self.upf_id} completed processing {pdu_session.generate_pdu_id()}"
         event = Event(simulation_clock, Events.PDU_SESSION_TERMINATE, description)
         event_manager.schedule_event(event)
 
@@ -23,6 +23,6 @@ class UPF:
         self.terminate_upf(simulation_clock, event_manager)
 
     def terminate_upf(self, simulation_clock, event_manager):
-        description = f"{simulation_clock:.2f}: {self.upf_id} terminated"
+        description = f"{self.upf_id} terminated"
         event = Event(simulation_clock, Events.UPF_TERMINATE, description)
         event_manager.schedule_event(event)

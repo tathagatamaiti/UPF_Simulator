@@ -14,6 +14,15 @@ class EventManager:
                    self.event_queue):
             heapq.heappush(self.event_queue, event)
 
+    def next_event(self):
+        try:
+            event = heapq.heappop(self.event_queue)
+            self.simulation_clock = event.event_time
+            return event
+        except IndexError:
+            print("No more events in the simulation queue. Terminating.")
+            sys.exit(0)
+
     def process_events(self):
         with open(self.output_file, 'w') as file:
             while self.event_queue:
@@ -23,12 +32,3 @@ class EventManager:
 
     def get_simulation_clock(self):
         return self.simulation_clock
-
-    def next_event(self):
-        try:
-            event = heapq.heappop(self.event_queue)
-            self.simulation_clock = event.get_time()
-            return event
-        except IndexError:
-            print("No more events in the simulation queue. Terminating.")
-            sys.exit(0)

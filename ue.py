@@ -1,4 +1,3 @@
-import random
 from pdu import PDU
 from event import Event
 from events import Events
@@ -23,23 +22,11 @@ class UE:
         event_manager.schedule_event(event)
 
         self.pdu_counter += 1
-
-        # Introduce a random delay between the creation of PDU sessions
-        delay = random.uniform(1.0, 5.0)
-        simulation_clock += delay
-
-        # Add the generated PDU session to the queue
         self.pdu_queue.append(pdu_session)
 
-        # Send PDU request message for the generated PDU session
-        description = f"UE{self.ue_id} sending PDU request to Compute Node"
+        description = f"UE{self.ue_id} sends PDU request {pdu_session} to Compute Node"
         event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
         event_manager.schedule_event(event)
-
-        description = f"UE{self.ue_id} sends PDU request to Compute Node"
-        event = Event(simulation_clock, Events.UE_SEND_PDU_REQUEST, description)
-        event_manager.schedule_event(event)
-
         self.compute_node.process_pdu_requests(self, simulation_clock, event_manager)
 
         return self.pdu_counter < self.pdu_limit

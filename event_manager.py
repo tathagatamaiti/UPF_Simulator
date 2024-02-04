@@ -1,5 +1,5 @@
-import heapq
 import sys
+import heapq
 
 
 class EventManager:
@@ -9,7 +9,8 @@ class EventManager:
         self.output_file = output_file
 
     def schedule_event(self, event):
-        event.get_time()
+        event_time = event.get_time()
+        self.simulation_clock = event_time
         if not any(e.get_type() == event.get_type() and e.get_description() == event.get_description() for e in
                    self.event_queue):
             heapq.heappush(self.event_queue, event)
@@ -17,7 +18,7 @@ class EventManager:
     def next_event(self):
         try:
             event = heapq.heappop(self.event_queue)
-            self.simulation_clock = event.event_time
+            self.simulation_clock = event.get_time()
             return event
         except IndexError:
             print("No more events in the simulation queue. Terminating.")

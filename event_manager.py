@@ -1,5 +1,6 @@
 import sys
 import heapq
+from event import Event
 
 
 class EventManager:
@@ -7,6 +8,13 @@ class EventManager:
         self.event_queue = []
         self.simulation_clock = 0
         self.output_file = output_file
+        self.event_objects = {}
+
+    def create_event(self, event_time, event_type, description, obj=None):
+        event = Event(event_time, event_type, description)
+        if obj:
+            self.event_objects[description] = obj
+        return event
 
     def schedule_event(self, event):
         event_time = event.get_time()
@@ -33,3 +41,12 @@ class EventManager:
 
     def get_simulation_clock(self):
         return self.simulation_clock
+
+    def has_events(self):
+        return bool(self.event_queue)
+
+    def get_object(self, description):
+        return self.event_objects.get(description)
+
+    def get_objects(self, obj_type):
+        return [obj for obj in self.event_objects.values() if obj_type in obj_type.lower()]

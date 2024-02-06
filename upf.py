@@ -22,16 +22,17 @@ class UPF:
         self.assigned_pdus.append(pdu_session)
 
         if self.processed_pdus >= self.max_pdus_per_upf:
-            self.terminate_upf(simulation_clock, event_manager)
+            self.terminate_upf(event_manager, simulation_clock)
         else:
             description = f"UPF{self.upf_id} completed processing {pdu_session.generate_pdu_id()}"
-            completion_event = Event(simulation_clock, Events.PDU_SESSION_TERMINATE, description)
+            completion_event = event_manager.create_event(simulation_clock, "PDU_SESSION_TERMINATE", description, self)
             event_manager.schedule_event(completion_event)
 
-    def terminate_upf(self, simulation_clock, event_manager):
+    def terminate_upf(self, event_manager, simulation_clock):
         for pdu_session in self.assigned_pdus:
             description = f"{pdu_session.generate_pdu_id()} termination"
-            terminate_event = Event(simulation_clock, Events.PDU_SESSION_TERMINATE, description)
+            terminate_event = event_manager.create_event(simulation_clock, "PDU_SESSION_TERMINATE", description,
+                                                         pdu_session)
             event_manager.schedule_event(terminate_event)
 
         description = f"UPF{self.upf_id} terminated"

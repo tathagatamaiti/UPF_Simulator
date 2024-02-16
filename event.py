@@ -1,37 +1,19 @@
-class Event:
-    event_counter = 0
+class EventType:
+    UE_INITIALIZATION = "UE Initialization"
+    PDU_GENERATION = "PDU Generation"
+    UPF_ALLOCATION = "UPF Allocation"
+    UPF_PROCESSING = "UPF Processing"
+    PDU_TERMINATION = "PDU Termination"
 
-    def __init__(self, event_time, event_type, description):
-        self.event_id = Event.event_counter
-        Event.event_counter += 1
+
+class Event:
+    def __init__(self, event_time, event_type, description, source=None, destination=None):
         self.event_time = event_time
         self.event_type = event_type
         self.description = description
+        self.source = source
+        self.destination = destination
+        self.data = None
 
-    def __eq__(self, other):
-        if not isinstance(other, Event):
-            return False
-        if other.event_id == self.event_id:
-            return True
-        return False
-
-    def __lt__(self, other):
-        if other.event_id == self.event_id:
-            return False
-        if self.event_time < other.event_time:
-            return True
-        if self.event_time > other.event_time:
-            return False
-        return self.event_id < other.event_id
-
-    def get_time(self):
-        return self.event_time
-
-    def get_type(self):
-        return self.event_type
-
-    def get_description(self):
-        return self.description
-
-    def __str__(self):
-        return f"{self.event_time:.2f}: {self.description}"
+    def handle_event(self, manager):
+        pass

@@ -1,43 +1,23 @@
-from event import Event
-from events import Events
+from event import Event, EventType
 
 
 class UPF:
-    def __init__(self, upf_id, max_pdus_per_upf):
+    def __init__(self, upf_id, max_pdus_per_upf, event_manager):
         self.upf_id = upf_id
-        self.start_time = None
         self.max_pdus_per_upf = max_pdus_per_upf
         self.processed_pdus = 0
-        self.assigned_pdus = []
+        self.event_manager = event_manager  # Added event_manager argument
 
-    def process_pdu(self, pdu_session, simulation_clock, event_manager):
-        pdu_session.start_time = simulation_clock
-        pdu_session.associate_upf(self)
-
+    def process_pdu(self, pdu_session, simulation_clock):
         description = f"UPF{self.upf_id} processing {pdu_session.generate_pdu_id()}"
-        event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
-        event_manager.schedule_event(event)
-
+        event = Event(simulation_clock, EventType.UPF_PROCESSING, description, source=f"UPF{self.upf_id}",
+                      destination="UE")
+        pdu_session.start_time = simulation_clock
         self.processed_pdus += 1
-        self.assigned_pdus.append(pdu_session)
-
         if self.processed_pdus >= self.max_pdus_per_upf:
-            self.terminate_upf(event_manager, simulation_clock)
-        else:
-            description = f"UPF{self.upf_id} completed processing {pdu_session.generate_pdu_id()}"
-            completion_event = event_manager.create_event(simulation_clock, "PDU_SESSION_TERMINATE", description, self)
-            event_manager.schedule_event(completion_event)
-
-    def terminate_upf(self, event_manager, simulation_clock):
-        for pdu_session in self.assigned_pdus:
-            description = f"{pdu_session.generate_pdu_id()} termination"
-            terminate_event = event_manager.create_event(simulation_clock, "PDU_SESSION_TERMINATE", description,
-                                                         pdu_session)
-            event_manager.schedule_event(terminate_event)
-
-        description = f"UPF{self.upf_id} terminated"
-        event = Event(simulation_clock, Events.UPF_TERMINATE, description)
-        event_manager.schedule_event(event)
-
-    def process_next_pdu(self, pdu_session, simulation_clock, event_manager):
-        self.process_pdu(pdu_session, simulation_clock, event_manager)
+            pdu_termination_event = Event(simulation_clock + pdu_session.duration, EventType.PDU_TERMINATION,
+                                          f"PDU termination: {pdu_session.generate_pdu_id()}", source="UPF",
+                                          destination="UE")
+            self.processed_pdus = 0
+            self.event_manager.schedule_event(pdu_termination_event)
+        return event

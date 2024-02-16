@@ -1,29 +1,31 @@
-import numpy as np
+from event import Event, EventType
 from pdu import PDU
+import numpy as np
 
 
 class UE:
-    def __init__(self, compute_node, event_manager, ue_id):
-        self.mean_pdu_arrival_time = 10
-        self.ue_id = ue_id
+    def __init__(self, compute_node, event_manager):
         self.compute_node = compute_node
         self.event_manager = event_manager
 
-    def generate_pdu_sessions(self, simulation_clock, event_manager):
-        time_to_next_pdu = np.random.exponential(self.mean_pdu_arrival_time)
+    def initialize_event(self):
+        return Event(0, EventType.UE_INITIALIZATION, "UE Initialization", source="UE", destination="Compute Node")
+
+    def generate_pdu_sessions(self, simulation_clock):
+        time_to_next_pdu = np.random.exponential(10)
         next_pdu_time = simulation_clock + time_to_next_pdu
-
         pdu_duration = 5
-        pdu_data = f"PDU data for UE{self.ue_id}"
-        pdu_session = PDU(self.ue_id, pdu_data, pdu_duration)
-        pdu_session.start_time = next_pdu_time
 
-        description = f"UE{self.ue_id} generates PDU session: {pdu_session.generate_pdu_id()}"
-        event = self.event_manager.create_event(next_pdu_time, "UE_GENERATE_PDU_SESSION", description, self)
-        self.event_manager.schedule_event(event)
+        pdu_data = f"PDU data for UE"
+        pdu_session = PDU(pdu_data, pdu_duration)
 
-        description = f"UE{self.ue_id} sends PDU request {pdu_session.generate_pdu_id()} to Compute Node"
-        event = self.event_manager.create_event(next_pdu_time, "UE_SEND_PDU_REQUEST", description, self)
-        self.event_manager.schedule_event(event)
+        description = f"UE generates PDU session: {pdu_session.generate_pdu_id()}"
+        event = Event(next_pdu_time, EventType.PDU_GENERATION, description, source="UE", destination="Compute Node")
+        self.event_manager.schedule_event(event, pdu_session)
 
-        return next_pdu_time < self.event_manager.get_simulation_time()
+    def handle_event(self, event):
+        if event.event_type == EventType.UE_INITIALIZATION:
+            self.generate_pdu_sessions(event.event_time)
+        elif event.event_type == EventType.PDU_GENERATION:
+            pdu_session = event.data
+            self.compute_node.process_pdu_request(pdu_session, event.event_time, self.event_manager)

@@ -1,31 +1,30 @@
+from event import Event, EventType
 from upf import UPF
-from event import Event
-from events import Events
 
 
 class ComputeNode:
     def __init__(self, event_manager):
-        self.upfs = []
-        self.next_upf_id = 0
         self.event_manager = event_manager
+        self.upfs = []
 
-    def add_upf(self, upf):
-        self.upfs.append(upf)
+    def process_pdu_request(self, pdu_session, simulation_clock):
+        if len(self.upfs) == 0 or self.upfs[-1].processed_pdus >= self.upfs[-1].max_pdus_per_upf:
+            new_upf = UPF(len(self.upfs), 2)
+            self.upfs.append(new_upf)
 
-    def generate_upf(self, pdu_session, max_pdus_per_upf):
-        new_upf_id = self.next_upf_id
-        self.next_upf_id += 1
-        new_upf = UPF(new_upf_id, max_pdus_per_upf)
-        self.add_upf(new_upf)
-        return new_upf
+            description = f"Compute Node allocated UPF{new_upf.upf_id} for PDU session"
+            event = Event(simulation_clock, EventType.UPF_ALLOCATION, description, source="Compute Node",
+                          destination=f"UPF{new_upf.upf_id}")
+            self.event_manager.schedule_event(event, pdu_session)
+        else:
+            description = f"Compute Node allocated UPF{self.upfs[-1].upf_id} for PDU session"
+            event = Event(simulation_clock, EventType.UPF_ALLOCATION, description, source="Compute Node",
+                          destination=f"UPF{self.upfs[-1].upf_id}")
+            self.event_manager.schedule_event(event, pdu_session)
 
-    def process_pdu_requests(self, ue, simulation_clock, event_manager):
-        while ue.pdu_queue:
-            pdu_session = ue.pdu_queue.pop(0)
-            new_upf = self.generate_upf(pdu_session, max_pdus_per_upf=2)
-
-            description = f"UPF{new_upf.upf_id} assigned to process {pdu_session.generate_pdu_id()}"
-            event = Event(simulation_clock, Events.UPF_PROCESS_PDU, description)
-            event_manager.schedule_event(event)
-
-            new_upf.process_next_pdu(pdu_session, simulation_clock + 1, event_manager)
+    def handle_event(self, event):
+        if event.event_type == EventType.UPF_ALLOCATION:
+            pdu_session = event.data
+            upf_id = int(event.destination.split("UPF")[1])
+            upf = self.upfs[upf_id]
+            upf.process_pdu(pdu_session, event.event_time)

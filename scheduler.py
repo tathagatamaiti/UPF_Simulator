@@ -1,6 +1,7 @@
 import heapq
-from upf import UPF
+
 from event import Event
+from upf import UPF
 
 
 class Scheduler:
@@ -13,12 +14,18 @@ class Scheduler:
     def schedule_event(self, event):
         heapq.heappush(self.events, event)
 
+    def next_event(self):
+        if self.events:
+            return heapq.heappop(self.events)
+        else:
+            return None
+
     def run_simulation(self):
         while self.current_time <= self.total_simulation_time:
-            if not self.events:
+            event = self.next_event()
+            if event is None:
                 break
 
-            event = heapq.heappop(self.events)
             self.current_time = event.event_time
             if event.event_type == 'UE_init':
                 for ue in self.ue_list:

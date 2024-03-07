@@ -19,7 +19,7 @@ class Scheduler:
                 break
 
             event = heapq.heappop(self.events)
-            self.current_time = event.time
+            self.current_time = event.event_time
             if event.event_type == 'UE_init':
                 for ue in self.ue_list:
                     pdu_session = ue.generate_pdu_session()
@@ -27,7 +27,7 @@ class Scheduler:
             elif event.event_type == 'PDU_request':
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
-                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}")
+                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, 0, 0)
                 upf = self.upf_dict[pdu_session]
                 self.compute_node.allocate_upf(pdu_session, upf, self.current_time)
             elif event.event_type == 'PDU_terminate':

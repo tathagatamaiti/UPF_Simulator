@@ -3,8 +3,12 @@ import random
 
 
 class UPF:
-    def __init__(self, name):
+    def __init__(self, name, upf_id, start_time, maxnum_pdu):
         self.name = name
+        self.upf_id = upf_id
+        self.start_time = start_time
+        self.list_pdu = []
+        self.maxnum_pdu = maxnum_pdu
 
     def process_pdu_session(self, pdu_session, current_time, scheduler):
         print(f"Simulation Clock: {current_time}, UPF {self.name} processing PDU session {pdu_session}")

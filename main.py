@@ -5,9 +5,9 @@ from scheduler import Scheduler
 
 
 def main():
-    scheduler = Scheduler(total_simulation_time=10)
+    scheduler = Scheduler(total_simulation_time=20)
     ue_list = [UE(f"UE{i}") for i in range(3)]
-    compute_node = ComputeNode("CN0", scheduler)
+    compute_node = ComputeNode("CN0", scheduler, 0, 0, 0)
     scheduler.ue_list = ue_list
     scheduler.compute_node = compute_node
 

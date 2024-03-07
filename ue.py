@@ -13,7 +13,7 @@ class UE:
         return pdu_session
 
     def send_pdu_request(self, pdu_session, compute_node, scheduler):
-        PDU(pdu_session, self.name, compute_node, scheduler.current_time, 0)
+        PDU(pdu_session, self.name, compute_node, scheduler.current_time, 0, 5)
         print(f"Simulation Clock: {scheduler.current_time}, "
               f"UE {self.name} sends PDU request to Compute Node {compute_node.name} for PDU session {pdu_session}")
         pdu_request_event = Event(scheduler.current_time + 1, 'PDU_request', pdu_session)

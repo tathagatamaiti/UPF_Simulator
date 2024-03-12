@@ -29,8 +29,8 @@ class Scheduler:
             self.current_time = event.event_time
             if event.event_type == 'UE_init':
                 for ue in self.ue_list:
-                    pdu_session = ue.generate_pdu_session()
-                    ue.send_pdu_request(pdu_session, self.compute_node, self)
+                    ue.generate_pdu_session()
+                    ue.pdu_session_generation(self)
             elif event.event_type == 'PDU_request':
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:

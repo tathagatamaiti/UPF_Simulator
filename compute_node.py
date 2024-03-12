@@ -1,11 +1,20 @@
+from upf import UPF
+
+
 class ComputeNode:
-    def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity):
+    def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity, maxnum_pdu):
         self.name = name
         self.scheduler = scheduler
         self.node_id = node_id
         self.cpu_capacity = cpu_capacity
         self.storage_capacity = storage_capacity
         self.list_upf = []
+        self.maxnum_pdu = maxnum_pdu
+
+        for i in range(maxnum_pdu):
+            upf_name = f"{self.name}_UPF{i}"
+            upf = UPF(upf_name, self.scheduler, 0, 20)
+            self.list_upf.append(upf)
 
     def allocate_upf(self, pdu_session, upf, current_time):
         print(f"Simulation Clock: {current_time}, "

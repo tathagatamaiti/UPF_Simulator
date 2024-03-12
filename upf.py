@@ -21,3 +21,6 @@ class UPF:
 
     def terminate(self, scheduler):
         print(f"Simulation Clock: {scheduler.current_time}, UPF {self.name} terminated")
+
+    def is_processing(self):
+        return len(self.list_pdu) > 0

@@ -1,6 +1,3 @@
-import random
-
-
 class PDU:
     def __init__(self, pdu_id, pdu_class, source_ue, compute_node, pdu_start_time, pdu_duration):
         self.pdu_id = pdu_id

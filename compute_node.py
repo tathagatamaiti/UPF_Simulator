@@ -2,6 +2,14 @@ from upf import UPF
 
 
 class ComputeNode:
+
+    # DEFINING EXPERIMENT PARAMETERS
+
+    maxnum_pdu = "MAXIMUM NUMBER OF PDUs IN THE EXPERIMENT"
+    node_id = "COMPUTE NODE ID"
+    cpu_capacity = "CPU CAPACITY AT COMPUTE NODE"
+    storage_capacity = "STORAGE CAPACITY OF COMPUTE NODE"
+
     def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity, maxnum_pdu):
         self.name = name
         self.scheduler = scheduler

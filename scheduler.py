@@ -1,11 +1,13 @@
 import heapq
-
 from event import Event
 from upf import UPF
 
 
 class Scheduler:
+
     def __init__(self, total_simulation_time):
+        self.compute_node = None
+        self.ue_list = []
         self.events = []
         self.total_simulation_time = total_simulation_time
         self.current_time = 0
@@ -34,7 +36,7 @@ class Scheduler:
             elif event.event_type == 'PDU_request':
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
-                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, 0, 0)
+                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, 0, 20)
                 upf = self.upf_dict[pdu_session]
                 self.compute_node.allocate_upf(pdu_session, upf, self.current_time)
             elif event.event_type == 'PDU_terminate':
@@ -43,5 +45,8 @@ class Scheduler:
                 upf.terminate_pdu_session(pdu_session, self)
                 upf_terminate_event = Event(self.current_time + 1, 'UPF_terminate', upf)
                 self.schedule_event(upf_terminate_event)
+            elif event.event_type == 'PDU_session_generation':
+                for ue in self.ue_list:
+                    ue.generate_pdu_session()
             elif event.event_type == 'UPF_terminate':
                 event.obj.terminate(self)

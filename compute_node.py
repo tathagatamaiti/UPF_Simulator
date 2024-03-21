@@ -3,21 +3,14 @@ from upf import UPF
 
 class ComputeNode:
 
-    # DEFINING EXPERIMENT PARAMETERS
-
-    maxnum_pdu = "MAXIMUM NUMBER OF PDUs IN THE EXPERIMENT"
-    node_id = "COMPUTE NODE ID"
-    cpu_capacity = "CPU CAPACITY AT COMPUTE NODE"
-    storage_capacity = "STORAGE CAPACITY OF COMPUTE NODE"
-
     def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity, maxnum_pdu):
         self.name = name
-        self.scheduler = scheduler
-        self.node_id = node_id
-        self.cpu_capacity = cpu_capacity
-        self.storage_capacity = storage_capacity
-        self.list_upf = []
-        self.maxnum_pdu = maxnum_pdu
+        self.scheduler = scheduler  # Scheduler of the experiment
+        self.node_id = node_id  # Compute Node id
+        self.cpu_capacity = cpu_capacity  # CPU capacity at Compute Node
+        self.storage_capacity = storage_capacity  # Storage capacity of Compute Node
+        self.list_upf = []  # List of UPFs
+        self.maxnum_pdu = maxnum_pdu  # Maximum number of PDUs in the experiment
 
         for i in range(maxnum_pdu):
             upf_name = f"{self.name}_UPF{i}"

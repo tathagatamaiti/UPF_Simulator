@@ -1,32 +1,25 @@
+import argparse
 import numpy as np
 from event import Event
 from ue import UE
 from compute_node import ComputeNode
 from scheduler import Scheduler
 
-# DEFINING EXPERIMENT PARAMETERS
 
-total_simulation_time = "TOTAL SIMULATION TIME FOR THE EXPERIMENT"
-num_ue = "NUMBER OF UEs DEFINED FOR THE EXPERIMENT"
-seed = "SEED DEFINED FOR REPRODUCING RESULTS"
-total_pdus_generated = "TOTAL PDUs GENERATED DURING THE EXPERIMENT"
-
-
-def main():
-    rng = np.random.default_rng(seed=42)  # Using NumPy's random number generator for seeding
-    total_simulation_time = 30
-    num_ue = 4
-    scheduler = Scheduler(total_simulation_time)
-    ue_list = [UE(f"UE{i}") for i in range(num_ue)]
-    compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, 20)
-    total_pdus_generated = 0
+def main(total_simulation_time, num_ue, seed):
+    rng = np.random.default_rng(seed=seed)  # Seed for random number generator
+    scheduler = Scheduler(total_simulation_time)  # Initializing scheduler for the experiment
+    ue_list = [UE(f"UE{i}") for i in range(num_ue)]  # List of UEs
+    compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, 20)  # Initializing compute node for the experiment
 
     scheduler.ue_list = ue_list
     scheduler.compute_node = compute_node
 
+    total_pdus_generated = 0  # Total PDUs generated during the experiment
+
     for ue in ue_list:
         ue.pdu_session_generation(scheduler)
-        pdu_generation_time = rng.integers(1, total_simulation_time)  # Using NumPy's random integer generator
+        pdu_generation_time = rng.integers(1, total_simulation_time)
         pdu_generation_event = Event(pdu_generation_time, 'UE_init', ue)
         scheduler.schedule_event(pdu_generation_event)
         total_pdus_generated += 1
@@ -35,4 +28,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()  # Run the simulation with user defined arguments
+    parser.add_argument("--simulation_time", type=int, default=30)  # Total simulation time for the experiment
+    parser.add_argument("--num_ue", type=int, default=4)  # Number of UEs defined for the experiment
+    parser.add_argument("--seed", type=int, default=42)  # Seed for random number generator
+
+    # More arguments to be added as required
+
+    args = parser.parse_args()
+    main(args.simulation_time, args.num_ue, args.seed)

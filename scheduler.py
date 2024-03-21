@@ -6,12 +6,12 @@ from upf import UPF
 class Scheduler:
 
     def __init__(self, total_simulation_time):
-        self.compute_node = None
-        self.ue_list = []
-        self.events = []
-        self.total_simulation_time = total_simulation_time
-        self.current_time = 0
-        self.upf_dict = {}
+        self.compute_node = None  # Compute Node in experiment
+        self.ue_list = []  # List of UEs
+        self.events = []  # List of events
+        self.total_simulation_time = total_simulation_time  # Total simulation time for the experiment
+        self.current_time = 0  # Current time at any point in the experiment
+        self.upf_dict = {}  # UPF dictionary
 
     def schedule_event(self, event):
         heapq.heappush(self.events, event)

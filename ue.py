@@ -1,6 +1,7 @@
 from event import Event
-from pdu import PDU
 import numpy as np
+
+from pdu import PDU
 
 
 class UE:
@@ -18,7 +19,7 @@ class UE:
 
     def pdu_session_generation(self, scheduler):
         pdu_id = self.pdu_session_id
-        pdu_class = None  # Class of PDU being generated
+        pdu_class = None   # Class of PDU being generated
         pdu_session = self.generate_pdu_session()
         pdu_duration = np.random.exponential(scale=5)  # Exponential distribution with scale mu=5
         pdu_start_time = scheduler.current_time  # Start time of the PDU session

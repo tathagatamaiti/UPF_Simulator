@@ -1,7 +1,8 @@
 class Event:
-    def __init__(self, event_time, event_type, obj=None, source_node=None, dest_node=None, ):
+    def __init__(self, event_time, event_type, termination_type, obj=None, source_node=None, dest_node=None):
         self.event_time = event_time  # Time at which event occurs
         self.event_type = event_type  # Type of the event
+        self.termination_type = termination_type  # Type of termination ACCEPT or REJECT
         self.source_node = source_node  # Source of the event
         self.dest_node = dest_node  # Destination of the event
         self.obj = obj

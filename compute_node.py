@@ -18,6 +18,6 @@ class ComputeNode:
             self.list_upf.append(upf)
 
     def allocate_upf(self, pdu_session, upf, current_time):
-        print(f"Simulation Clock: {current_time}, "
-              f"Compute Node {self.name} allocated UPF {upf.name} for processing PDU session {pdu_session}")
+        print(f"{current_time}, "
+              f"{self.name} allocated {upf.name} for processing {pdu_session}")
         upf.process_pdu_session(pdu_session, current_time, self.scheduler)

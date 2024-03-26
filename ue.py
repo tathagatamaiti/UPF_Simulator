@@ -1,7 +1,6 @@
 from event import Event
-import numpy as np
-
 from pdu import PDU
+import numpy as np
 
 
 class UE:
@@ -19,15 +18,15 @@ class UE:
 
     def pdu_session_generation(self, scheduler):
         pdu_id = self.pdu_session_id
-        pdu_class = None   # Class of PDU being generated
+        pdu_class = None  # Class of PDU being generated
         pdu_session = self.generate_pdu_session()
         pdu_duration = np.random.exponential(scale=5)  # Exponential distribution with scale mu=5
         pdu_start_time = scheduler.current_time  # Start time of the PDU session
         PDU(pdu_id, pdu_class, self.name, scheduler.compute_node, pdu_start_time, pdu_duration)
-        print(f"Simulation Clock: {scheduler.current_time}, UE {self.name} generated PDU session {pdu_session}")
-        print(f"Simulation Clock: {scheduler.current_time}, "
-              f"UE {self.name} sends PDU request to Compute Node {scheduler.compute_node.name} "
-              f"for PDU session {pdu_session}")
+        print(f"{scheduler.current_time}, {self.name} generated {pdu_session}")
+        print(f"{scheduler.current_time}, "
+              f"{self.name} sends PDU request to {scheduler.compute_node.name} "
+              f"for {pdu_session}")
         pdu_request_event = Event(pdu_start_time, 'PDU_request', pdu_session)
         scheduler.schedule_event(pdu_request_event)
         # Schedule next call of pdu_session_generation

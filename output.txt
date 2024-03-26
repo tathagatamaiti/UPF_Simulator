@@ -1,0 +1,113 @@
+0, UE0 generated UE0_pdu0
+0, UE0 sends PDU request to CN0 for UE0_pdu0
+0, UE1 generated UE1_pdu0
+0, UE1 sends PDU request to CN0 for UE1_pdu0
+0, UE2 generated UE2_pdu0
+0, UE2 sends PDU request to CN0 for UE2_pdu0
+0, UE3 generated UE3_pdu0
+0, UE3 sends PDU request to CN0 for UE3_pdu0
+0, CN0 allocated UPF0 for processing UE0_pdu0
+0, UPF0 processing UE0_pdu0
+0, CN0 allocated UPF1 for processing UE2_pdu0
+0, UPF1 processing UE2_pdu0
+0, CN0 allocated UPF2 for processing UE1_pdu0
+0, UPF2 processing UE1_pdu0
+0, CN0 allocated UPF3 for processing UE3_pdu0
+0, UPF3 processing UE3_pdu0
+3, UE0 generated UE0_pdu4
+3, UE0 sends PDU request to CN0 for UE0_pdu4
+3, UE1 generated UE1_pdu4
+3, UE1 sends PDU request to CN0 for UE1_pdu4
+3, UE2 generated UE2_pdu4
+3, UE2 sends PDU request to CN0 for UE2_pdu4
+3, UE3 generated UE3_pdu4
+3, UE3 sends PDU request to CN0 for UE3_pdu4
+3, CN0 allocated UPF4 for processing UE0_pdu4
+3, UPF4 processing UE0_pdu4
+3, CN0 allocated UPF5 for processing UE1_pdu4
+3, UPF5 processing UE1_pdu4
+3, CN0 allocated UPF6 for processing UE2_pdu4
+3, UPF6 processing UE2_pdu4
+3, CN0 allocated UPF7 for processing UE3_pdu4
+3, UPF7 processing UE3_pdu4
+8.517149226573785, UE3_pdu0 terminated
+8.517149226573785, UE0_pdu0 terminated
+8.517149226573785, UE1_pdu0 terminated
+8.517149226573785, UE2_pdu0 terminated
+9.517149226573785, UPF3 terminated
+9.517149226573785, UPF0 terminated
+9.517149226573785, UPF2 terminated
+9.517149226573785, UPF1 terminated
+11.517149226573785, UE0_pdu4 terminated
+11.517149226573785, UE3_pdu4 terminated
+11.517149226573785, UE2_pdu4 terminated
+11.517149226573785, UE1_pdu4 terminated
+12.517149226573785, UPF4 terminated
+12.517149226573785, UPF6 terminated
+12.517149226573785, UPF5 terminated
+12.517149226573785, UPF7 terminated
+13, UE0 generated UE0_pdu12
+13, UE0 sends PDU request to CN0 for UE0_pdu12
+13, UE1 generated UE1_pdu12
+13, UE1 sends PDU request to CN0 for UE1_pdu12
+13, UE2 generated UE2_pdu12
+13, UE2 sends PDU request to CN0 for UE2_pdu12
+13, UE3 generated UE3_pdu12
+13, UE3 sends PDU request to CN0 for UE3_pdu12
+13, CN0 allocated UPF8 for processing UE0_pdu12
+13, UPF8 processing UE0_pdu12
+13, CN0 allocated UPF9 for processing UE2_pdu12
+13, UPF9 processing UE2_pdu12
+13, CN0 allocated UPF10 for processing UE1_pdu12
+13, UPF10 processing UE1_pdu12
+13, CN0 allocated UPF11 for processing UE3_pdu12
+13, UPF11 processing UE3_pdu12
+19, UE0 generated UE0_pdu18
+19, UE0 sends PDU request to CN0 for UE0_pdu18
+19, UE1 generated UE1_pdu18
+19, UE1 sends PDU request to CN0 for UE1_pdu18
+19, UE2 generated UE2_pdu18
+19, UE2 sends PDU request to CN0 for UE2_pdu18
+19, UE3 generated UE3_pdu18
+19, UE3 sends PDU request to CN0 for UE3_pdu18
+19, CN0 allocated UPF12 for processing UE0_pdu18
+19, UPF12 processing UE0_pdu18
+19, CN0 allocated UPF13 for processing UE3_pdu18
+19, UPF13 processing UE3_pdu18
+19, CN0 allocated UPF14 for processing UE1_pdu18
+19, UPF14 processing UE1_pdu18
+19, CN0 allocated UPF15 for processing UE2_pdu18
+19, UPF15 processing UE2_pdu18
+21.517149226573785, UE2_pdu12 terminated
+21.517149226573785, UE3_pdu12 terminated
+21.517149226573785, UE1_pdu12 terminated
+21.517149226573785, UE0_pdu12 terminated
+22.517149226573785, UPF9 terminated
+22.517149226573785, UPF10 terminated
+22.517149226573785, UPF8 terminated
+22.517149226573785, UPF11 terminated
+23, UE0 generated UE0_pdu22
+23, UE0 sends PDU request to CN0 for UE0_pdu22
+23, UE1 generated UE1_pdu22
+23, UE1 sends PDU request to CN0 for UE1_pdu22
+23, UE2 generated UE2_pdu22
+23, UE2 sends PDU request to CN0 for UE2_pdu22
+23, UE3 generated UE3_pdu22
+23, UE3 sends PDU request to CN0 for UE3_pdu22
+23, CN0 allocated UPF16 for processing UE0_pdu22
+23, UPF16 processing UE0_pdu22
+23, CN0 allocated UPF17 for processing UE3_pdu22
+23, UPF17 processing UE3_pdu22
+23, CN0 allocated UPF18 for processing UE1_pdu22
+23, UPF18 processing UE1_pdu22
+23, CN0 allocated UPF19 for processing UE2_pdu22
+23, UPF19 processing UE2_pdu22
+27.517149226573785, UE2_pdu18 terminated
+27.517149226573785, UE3_pdu18 terminated
+27.517149226573785, UE1_pdu18 terminated
+27.517149226573785, UE0_pdu18 terminated
+28.517149226573785, UPF15 terminated
+28.517149226573785, UPF13 terminated
+28.517149226573785, UPF14 terminated
+28.517149226573785, UPF12 terminated
+31.517149226573785, UE2_pdu22 terminated

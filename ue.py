@@ -1,10 +1,10 @@
 from event import Event
+from events import Events
 from pdu import PDU
 import numpy as np
 
 
 class UE:
-
     pdu_duration = np.random.exponential(scale=5)  # Duration of the PDU session
 
     def __init__(self, name):
@@ -20,17 +20,18 @@ class UE:
         pdu_id = self.pdu_session_id
         pdu_class = None  # Class of PDU being generated
         pdu_session = self.generate_pdu_session()
-        pdu_duration = np.random.exponential(scale=5)  # Exponential distribution with scale mu=5
-        pdu_start_time = scheduler.current_time  # Start time of the PDU session
+        pdu_duration = np.ceil(np.random.exponential(scale=5))  # Exponential distribution with scale mu=5
+        pdu_start_time = np.ceil(scheduler.current_time)  # Start time of the PDU session
         PDU(pdu_id, pdu_class, self.name, scheduler.compute_node, pdu_start_time, pdu_duration)
-        print(f"{scheduler.current_time}, {self.name} generated {pdu_session}")
-        print(f"{scheduler.current_time}, "
+        print(f"{np.ceil(scheduler.current_time)}, {self.name} generated {pdu_session}")
+        print(f"{np.ceil(scheduler.current_time)}, "
               f"{self.name} sends PDU request to {scheduler.compute_node.name} "
               f"for {pdu_session}")
-        pdu_request_event = Event(pdu_start_time, 'PDU_request', pdu_session)
+        pdu_request_event = Event(pdu_start_time, Events.PDU_request, pdu_session)
         scheduler.schedule_event(pdu_request_event)
         # Schedule next call of pdu_session_generation
-        next_arrival_time = scheduler.current_time + np.random.exponential(scale=2)  # Exponential distribution with
+        next_arrival_time = np.ceil(scheduler.current_time + np.random.exponential(scale=2))  # Exponential
+        # distribution with
         # scale lambda=2
-        next_pdu_session_event = Event(next_arrival_time, 'PDU_session_generation', self)
+        next_pdu_session_event = Event(next_arrival_time, Events.PDU_session_generation, self)
         scheduler.schedule_event(next_pdu_session_event)

@@ -2,6 +2,7 @@ import argparse
 import numpy as np
 import sys
 from event import Event
+from events import Events
 from ue import UE
 from compute_node import ComputeNode
 from scheduler import Scheduler
@@ -16,7 +17,7 @@ def main(total_simulation_time, num_ue, seed, output_file):
         rng = np.random.default_rng(seed=seed)  # Seed for random number generator
         scheduler = Scheduler(total_simulation_time)  # Initializing scheduler for the experiment
         ue_list = [UE(f"UE{i}") for i in range(num_ue)]  # List of UEs
-        compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, 20)  # Initializing compute node for the experiment
+        compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, 3)  # Initializing compute node for the experiment
 
         scheduler.ue_list = ue_list
         scheduler.compute_node = compute_node
@@ -26,7 +27,7 @@ def main(total_simulation_time, num_ue, seed, output_file):
         for ue in ue_list:
             ue.pdu_session_generation(scheduler)
             pdu_generation_time = rng.integers(1, total_simulation_time)
-            pdu_generation_event = Event(pdu_generation_time, 'UE_init', ue)
+            pdu_generation_event = Event(pdu_generation_time, Events.UE_init, ue)
             scheduler.schedule_event(pdu_generation_event)
             total_pdus_generated += 1
 

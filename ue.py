@@ -27,11 +27,11 @@ class UE:
         print(f"{np.ceil(scheduler.current_time)}, "
               f"{self.name} sends PDU request to {scheduler.compute_node.name} "
               f"for {pdu_session}")
-        pdu_request_event = Event(pdu_start_time, Events.PDU_request, pdu_session)
+        pdu_request_event = Event(pdu_start_time, Events.PDU_request, 1, pdu_session)
         scheduler.schedule_event(pdu_request_event)
         # Schedule next call of pdu_session_generation
         next_arrival_time = np.ceil(scheduler.current_time + np.random.exponential(scale=2))  # Exponential
         # distribution with
         # scale lambda=2
-        next_pdu_session_event = Event(next_arrival_time, Events.PDU_session_generation, self)
+        next_pdu_session_event = Event(next_arrival_time, Events.PDU_session_generation, 2,  self)
         scheduler.schedule_event(next_pdu_session_event)

@@ -17,7 +17,7 @@ class UPF:
     def process_pdu_session(self, pdu_session, current_time, scheduler):
         print(f"{np.ceil(scheduler.current_time)}, {self.name} processing {pdu_session}")
         termination_time = np.ceil(UE.pdu_duration)  # Time after which PDU session is to be terminated
-        termination_event = Event(current_time + termination_time, Events.PDU_terminate, pdu_session)
+        termination_event = Event(current_time + termination_time, Events.PDU_terminate, 3, pdu_session)
         scheduler.schedule_event(termination_event)
 
     def terminate_pdu_session(self, pdu_session, scheduler):

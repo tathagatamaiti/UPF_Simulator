@@ -27,7 +27,7 @@ def main(total_simulation_time, num_ue, seed, output_file):
         for ue in ue_list:
             ue.pdu_session_generation(scheduler)
             pdu_generation_time = rng.integers(1, total_simulation_time)
-            pdu_generation_event = Event(pdu_generation_time, Events.UE_init, ue)
+            pdu_generation_event = Event(pdu_generation_time, Events.UE_init, 0, ue)
             scheduler.schedule_event(pdu_generation_event)
             total_pdus_generated += 1
 

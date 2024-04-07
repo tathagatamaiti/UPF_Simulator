@@ -44,7 +44,7 @@ class Scheduler:
                 pdu_session = event.obj
                 upf = self.upf_dict[pdu_session]
                 upf.terminate_pdu_session(pdu_session, self)
-                upf_terminate_event = Event(self.current_time + 1, Events.UPF_terminate, upf)
+                upf_terminate_event = Event(self.current_time + 1, Events.UPF_terminate, 4, upf)
                 self.schedule_event(upf_terminate_event)
             elif event.event_type == Events.PDU_session_generation:
                 for ue in self.ue_list:

@@ -37,9 +37,9 @@ class Scheduler:
             elif event.event_type == Events.PDU_request:
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
-                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, 0, 3)
+                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time, 3)
                 upf = self.upf_dict[pdu_session]
-                self.compute_node.allocate_upf(pdu_session, upf, self.current_time)
+                self.compute_node.allocate_upf(pdu_session, self.current_time)  # Removed 'upf' argument
             elif event.event_type == Events.PDU_terminate:
                 pdu_session = event.obj
                 upf = self.upf_dict[pdu_session]
@@ -49,5 +49,3 @@ class Scheduler:
             elif event.event_type == Events.PDU_session_generation:
                 for ue in self.ue_list:
                     ue.generate_pdu_session()
-            elif event.event_type == Events.UPF_terminate:
-                event.obj.terminate(self)

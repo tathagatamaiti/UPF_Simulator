@@ -39,7 +39,7 @@ def main(total_simulation_time, num_ue, seed, output_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()  # Run the simulation with user defined arguments
-    parser.add_argument("--simulation_time", type=int, default=30)  # Total simulation time for the experiment
+    parser.add_argument("--simulation_time", type=int, default=40)  # Total simulation time for the experiment
     parser.add_argument("--num_ue", type=int, default=4)  # Number of UEs defined for the experiment
     parser.add_argument("--seed", type=int, default=42)  # Seed for random number generator
     parser.add_argument("--output_file", type=str, default="output.txt")  # Output file for storing the results

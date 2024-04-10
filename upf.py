@@ -18,12 +18,11 @@ class UPF:
         return self.num_pdus_handled < self.maxnum_pdu
 
     def process_pdu_session(self, pdu_session, current_time, scheduler):
-        if self.can_handle_more_pdus():
-            print(f"{np.ceil(scheduler.current_time)}, {self.name} processing {pdu_session}")
-            termination_time = np.ceil(UE.pdu_duration)  # Time after which PDU session is to be terminated
-            termination_event = Event(current_time + termination_time, Events.PDU_terminate, 3, pdu_session)
-            scheduler.schedule_event(termination_event)
-            self.num_pdus_handled += 1
+        print(f"{np.ceil(scheduler.current_time)}, {self.name} processing {pdu_session}")
+        termination_time = np.ceil(UE.pdu_duration)  # Time after which PDU session is to be terminated
+        termination_event = Event(current_time + termination_time, Events.PDU_terminate, 3, pdu_session)
+        scheduler.schedule_event(termination_event)
+        self.num_pdus_handled += 1
 
     def terminate_pdu_session(self, pdu_session, scheduler):
         print(f"{np.ceil(scheduler.current_time)}, {pdu_session} terminated")

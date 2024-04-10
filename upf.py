@@ -24,12 +24,6 @@ class UPF:
             termination_event = Event(current_time + termination_time, Events.PDU_terminate, 3, pdu_session)
             scheduler.schedule_event(termination_event)
             self.num_pdus_handled += 1
-        else:
-            new_upf_id = self.upf_id + 1
-            new_upf_name = f"{scheduler.compute_node.name}_UPF{new_upf_id}"
-            new_upf = UPF(new_upf_name, new_upf_id, current_time, self.maxnum_pdu)
-            scheduler.compute_node.list_upf.append(new_upf)
-            new_upf.process_pdu_session(pdu_session, current_time, scheduler)
 
     def terminate_pdu_session(self, pdu_session, scheduler):
         print(f"{np.ceil(scheduler.current_time)}, {pdu_session} terminated")

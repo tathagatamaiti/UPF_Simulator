@@ -8,7 +8,7 @@ from compute_node import ComputeNode
 from scheduler import Scheduler
 
 
-def main(total_simulation_time, num_ue, seed, output_file):
+def main(total_simulation_time, num_ue, seed, sim_num_pdu, upf_c, output_file):
     # Open the output file in write mode
     with open(output_file, 'w') as f:
         # Redirect stdout to the file
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     parser.add_argument("--output_file", type=str, default="output.txt")  # Output file for storing the results
 
     args = parser.parse_args()
-    main(args.simulation_time, args.num_ue, args.seed, args.output_file)
+    main(args.simulation_time, args.num_ue, args.seed, args.sim_num_pdu, args.upf_c, args.output_file)

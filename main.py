@@ -42,6 +42,10 @@ if __name__ == "__main__":
     parser.add_argument("--simulation_time", type=int, default=40)  # Total simulation time for the experiment
     parser.add_argument("--num_ue", type=int, default=4)  # Number of UEs defined for the experiment
     parser.add_argument("--seed", type=int, default=42)  # Seed for random number generator
+    parser.add_argument("--sim_num_pdu", type=int, default=20)  # Total number of PDUs in the simulation
+    parser.add_argument("--upf_c", type=int, default=3)  # Capacity of a UPF in terms of number of PDUs it can handle
+    # parser.add_argument("--mu", type=int, default=)  # average duration of PDUs
+    # parser.add_argument("--lambda", type=int, default=)  # inter-arrival time between PDU at each UE
     parser.add_argument("--output_file", type=str, default="output.txt")  # Output file for storing the results
 
     args = parser.parse_args()

@@ -23,8 +23,8 @@ class UE:
         pdu_duration = np.ceil(np.random.exponential(scale=5))  # Exponential distribution with scale mu=5
         pdu_start_time = np.ceil(scheduler.current_time)  # Start time of the PDU session
         PDU(pdu_id, pdu_class, self.name, scheduler.compute_node, pdu_start_time, pdu_duration)
-        print(f"{np.ceil(scheduler.current_time)}, {self.name} generated {pdu_session}")
-        print(f"{np.ceil(scheduler.current_time)}, "
+        print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, {self.name} generated {pdu_session}")
+        print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, "
               f"{self.name} sends PDU request to {scheduler.compute_node.name} "
               f"for {pdu_session}")
         pdu_request_event = Event(pdu_start_time, Events.PDU_request, 1, pdu_session)

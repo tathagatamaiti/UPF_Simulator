@@ -1,4 +1,6 @@
 class Event:
+    event_id_counter = 0  # Counter to generate unique event IDs
+
     def __init__(self, event_time, event_type, event_priority, obj=None, source_node=None, dest_node=None):
         self.event_time = event_time  # Time at which event occurs
         self.event_type = event_type  # Type of the event
@@ -6,6 +8,8 @@ class Event:
         self.dest_node = dest_node  # Destination of the event
         self.obj = obj  # Generic attribute for any object relevant to event
         self.event_priority = event_priority  # Priority of the event
+        self.event_id = Event.event_id_counter  # Unique event ID
+        Event.event_id_counter += 1
 
     def __lt__(self, other):
         # Compare event_time and event_priority

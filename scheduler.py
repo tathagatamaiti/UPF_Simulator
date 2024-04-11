@@ -49,3 +49,13 @@ class Scheduler:
             elif event.event_type == Events.PDU_session_generation:
                 for ue in self.ue_list:
                     ue.generate_pdu_session()
+
+        # After all events have been processed, check if there are remaining PDUs
+        additional_pdu = [event.obj for event in self.events if event.event_type == Events.PDU_request]
+        if not additional_pdu:
+            # If there are no remaining PDUs, create a new UPF to handle them
+            last_event_time = max(event.event_time for event in self.events) if self.events else 0
+            last_pdu_time = max(
+                (event.obj.event_time for event in self.events if event.event_type == Events.PDU_request), default=0)
+            last_event_time = max(last_event_time, last_pdu_time)
+            self.compute_node.allocate_upf("additional PDU", last_event_time)

@@ -1,6 +1,7 @@
 import heapq
 from event import Event
 from events import Events
+import plots
 from upf import UPF
 
 
@@ -24,12 +25,21 @@ class Scheduler:
             return None
 
     def run_simulation(self):
+
+        pdu_count = [0] * (self.total_simulation_time + 1)  # Initialize PDU count list
+        upf_count = [0] * (self.total_simulation_time + 1)  # Initialize UPF count list
+
         while self.current_time <= self.total_simulation_time:
             event = self.next_event()
             if event is None:
                 break
 
-            self.current_time = event.event_time
+            self.current_time = int(event.event_time)  # Convert current_time to integer
+            self.current_time = min(self.current_time,
+                                    self.total_simulation_time)  # Ensure current_time does not exceed bounds
+            pdu_count[self.current_time] += sum(1 for e in self.events if e.event_type == Events.PDU_request)
+            upf_count[self.current_time] = len(self.upf_dict)
+
             if event.event_type == Events.UE_init:
                 for ue in self.ue_list:
                     ue.generate_pdu_session()
@@ -59,3 +69,7 @@ class Scheduler:
                 (event.obj.event_time for event in self.events if event.event_type == Events.PDU_request), default=0)
             last_event_time = max(last_event_time, last_pdu_time)
             self.compute_node.allocate_upf("additional PDU", last_event_time)
+
+        # Plotting
+        plots.plot_pdu_vs_simulation_time(self.total_simulation_time, pdu_count)
+        plots.plot_upf_vs_simulation_time(self.total_simulation_time, upf_count)

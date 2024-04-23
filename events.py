@@ -1,5 +1,4 @@
 class Events:
-
     # initialize the UEs
     UE_init = 0
 
@@ -16,4 +15,3 @@ class Events:
     UPF_terminate = 4
 
 #  more to be added as needed
-

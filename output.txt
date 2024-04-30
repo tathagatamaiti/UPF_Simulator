@@ -10,6 +10,10 @@
 13, 0.0, UPF0 processing UE2_pdu0
 14, 0.0, UPF0 processing UE1_pdu0
 15, 0.0, UPF1 processing UE3_pdu0
+16, 2.0, UE0_pdu0 terminated
+16, 2.0, UE2_pdu0 terminated
+16, 2.0, UE3_pdu0 terminated
+16, 2.0, UE1_pdu0 terminated
 16, 5.0, UE0 generated UE0_pdu1
 16, 5.0, UE0 sends PDU request to CN0 for UE0_pdu1
 18, 5.0, UE1 generated UE1_pdu1
@@ -19,17 +23,13 @@
 22, 5.0, UE3 generated UE3_pdu1
 22, 5.0, UE3 sends PDU request to CN0 for UE3_pdu1
 24, 5.0, UPF1 processing UE0_pdu1
-25, 5.0, UPF1 processing UE2_pdu1
-26, 5.0, UPF2 processing UE3_pdu1
-27, 5.0, UPF2 processing UE1_pdu1
-28, 7.0, UE0_pdu0 terminated
-28, 7.0, UE1_pdu0 terminated
-28, 7.0, UE2_pdu0 terminated
-28, 7.0, UE3_pdu0 terminated
-28, 12.0, UE0_pdu1 terminated
-28, 12.0, UE1_pdu1 terminated
-28, 12.0, UE2_pdu1 terminated
-28, 12.0, UE3_pdu1 terminated
+25, 5.0, UPF1 processing UE1_pdu1
+26, 5.0, UPF2 processing UE2_pdu1
+27, 5.0, UPF2 processing UE3_pdu1
+28, 7.0, UE2_pdu1 terminated
+28, 7.0, UE0_pdu1 terminated
+28, 7.0, UE3_pdu1 terminated
+28, 7.0, UE1_pdu1 terminated
 28, 22.0, UE0 generated UE0_pdu2
 28, 22.0, UE0 sends PDU request to CN0 for UE0_pdu2
 30, 22.0, UE1 generated UE1_pdu2
@@ -42,10 +42,10 @@
 37, 22.0, UPF3 processing UE2_pdu2
 38, 22.0, UPF3 processing UE1_pdu2
 39, 22.0, UPF3 processing UE3_pdu2
-40, 29.0, UE1_pdu2 terminated
-40, 29.0, UE3_pdu2 terminated
-40, 29.0, UE2_pdu2 terminated
-40, 29.0, UE0_pdu2 terminated
+40, 24.0, UE1_pdu2 terminated
+40, 24.0, UE2_pdu2 terminated
+40, 24.0, UE3_pdu2 terminated
+40, 24.0, UE0_pdu2 terminated
 40, 33.0, UE0 generated UE0_pdu3
 40, 33.0, UE0 sends PDU request to CN0 for UE0_pdu3
 42, 33.0, UE1 generated UE1_pdu3
@@ -58,6 +58,10 @@
 49, 33.0, UPF4 processing UE2_pdu3
 50, 33.0, UPF4 processing UE1_pdu3
 51, 33.0, UPF5 processing UE3_pdu3
+52, 35.0, UE1_pdu3 terminated
+52, 35.0, UE3_pdu3 terminated
+52, 35.0, UE0_pdu3 terminated
+52, 35.0, UE2_pdu3 terminated
 52, 38.0, UE0 generated UE0_pdu4
 52, 38.0, UE0 sends PDU request to CN0 for UE0_pdu4
 54, 38.0, UE1 generated UE1_pdu4
@@ -67,14 +71,10 @@
 58, 38.0, UE3 generated UE3_pdu4
 58, 38.0, UE3 sends PDU request to CN0 for UE3_pdu4
 60, 38.0, UPF5 processing UE0_pdu4
-61, 38.0, UPF5 processing UE1_pdu4
-62, 38.0, UPF6 processing UE2_pdu4
+61, 38.0, UPF5 processing UE2_pdu4
+62, 38.0, UPF6 processing UE1_pdu4
 63, 38.0, UPF6 processing UE3_pdu4
-64, 40.0, UE3_pdu3 terminated
-64, 40.0, UE2_pdu3 terminated
-64, 40.0, UE1_pdu3 terminated
-64, 40.0, UE0_pdu3 terminated
-64, 45.0, UE3_pdu4 terminated
-64, 45.0, UE1_pdu4 terminated
-64, 45.0, UE0_pdu4 terminated
-64, 45.0, UE2_pdu4 terminated
+64, 40.0, UE1_pdu4 terminated
+64, 40.0, UE3_pdu4 terminated
+64, 40.0, UE2_pdu4 terminated
+64, 40.0, UE0_pdu4 terminated

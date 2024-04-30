@@ -1,7 +1,11 @@
 import heapq
+
+import numpy as np
+
 from event import Event
 from events import Events
 from upf import UPF
+from compute_node import ComputeNode
 
 
 class Scheduler:
@@ -44,12 +48,16 @@ class Scheduler:
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
                     self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time, self.t)
-                upf = self.upf_dict[pdu_session]
                 self.compute_node.allocate_upf(pdu_session, self.current_time)
             elif event.event_type == Events.PDU_terminate:
                 pdu_session = event.obj
                 upf = self.upf_dict[pdu_session]
                 upf.terminate_pdu_session(pdu_session, self)
+            elif event.event_type == Events.UPF_terminate:
+                pdu_session = event.obj
+                upf = self.upf_dict[pdu_session]
+                upf_name = upf.name
+                ComputeNode.scale_in(upf_name, self, self.current_time)
             elif event.event_type == Events.PDU_session_generation:
                 for ue in self.ue_list:
                     ue.generate_pdu_session()

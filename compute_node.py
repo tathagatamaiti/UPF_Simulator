@@ -1,3 +1,7 @@
+import numpy as np
+
+from event import Event
+from events import Events
 from upf import UPF
 
 
@@ -36,3 +40,11 @@ class ComputeNode:
             self.upf_counter += 1
             new_upf.process_pdu_session(pdu_session, current_time, self.scheduler)
 
+    def scale_in(self, current_time, scheduler):
+        for upf_name, upf_instance in list(self.upf_instances.items()):
+            if upf_instance.num_pdus_handled == 0:
+                termination_event = Event(current_time, Events.UPF_terminate, 4, upf_name)
+                scheduler.schedule_event(termination_event)
+                print(f"{Event.event_id_counter}, {np.ceil(self.scheduler.current_time)}, "
+                      f"{upf_name} terminated")
+                del self.upf_instances[upf_name]

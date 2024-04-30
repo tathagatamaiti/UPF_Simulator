@@ -26,8 +26,4 @@ class UPF:
 
     def terminate_pdu_session(self, pdu_session, scheduler):
         print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, {pdu_session} terminated")
-        self.num_pdus_handled -= 1
 
-#        if self.num_pdus_handled == 0:
-#            termination_event = Event(scheduler.current_time + 1, Events.UPF_terminate, 4, self)
-#            scheduler.schedule_event(termination_event)

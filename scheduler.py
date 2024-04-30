@@ -1,19 +1,20 @@
 import heapq
 from event import Event
 from events import Events
-import plots
 from upf import UPF
 
 
 class Scheduler:
 
-    def __init__(self, total_simulation_time):
+    def __init__(self, total_simulation_time, max_upfs, t):
         self.compute_node = None  # Compute Node in experiment
         self.ue_list = []  # List of UEs
         self.events = []  # List of events
         self.total_simulation_time = total_simulation_time  # Total simulation time for the experiment
         self.current_time = 0  # Current time at any point in the experiment
         self.upf_dict = {}  # UPF dictionary
+        self.max_upfs = max_upfs  # Maximum number of UPFs allowed during simulation
+        self.t = t  # Maximum slots in a UPF
 
     def schedule_event(self, event):
         heapq.heappush(self.events, event)
@@ -42,26 +43,13 @@ class Scheduler:
             elif event.event_type == Events.PDU_request:
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
-                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time, 3)
+                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time, self.t)
                 upf = self.upf_dict[pdu_session]
-                self.compute_node.allocate_upf(pdu_session, self.current_time)  # Removed 'upf' argument
+                self.compute_node.allocate_upf(pdu_session, self.current_time)
             elif event.event_type == Events.PDU_terminate:
                 pdu_session = event.obj
                 upf = self.upf_dict[pdu_session]
                 upf.terminate_pdu_session(pdu_session, self)
-                upf_terminate_event = Event(self.current_time + 1, Events.UPF_terminate, 4, upf)
-                self.schedule_event(upf_terminate_event)
             elif event.event_type == Events.PDU_session_generation:
                 for ue in self.ue_list:
                     ue.generate_pdu_session()
-
-        # After all events have been processed, check if there are remaining PDUs
-        additional_pdu = [event.obj for event in self.events if event.event_type == Events.PDU_request]
-        if not additional_pdu:
-            # If there are no remaining PDUs, create a new UPF to handle them
-            last_event_time = max(event.event_time for event in self.events) if self.events else 0
-            last_pdu_time = max(
-                (event.obj.event_time for event in self.events if event.event_type == Events.PDU_request), default=0)
-            last_event_time = max(last_event_time, last_pdu_time)
-            self.compute_node.allocate_upf("additional PDU", last_event_time)
-

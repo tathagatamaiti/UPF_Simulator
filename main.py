@@ -1,4 +1,5 @@
 import argparse
+import csv
 import numpy as np
 import sys
 from event import Event
@@ -10,15 +11,17 @@ from scheduler import Scheduler
 
 def main(total_simulation_time, num_ue, seed, sim_num_pdu, max_upfs, t, output_file):
     # Open the output file in write mode
-    with open(output_file, 'w') as f:
+    with open(output_file, 'w') as f, open('output.csv', 'w', newline='') as csv_file:
         # Redirect stdout to the file
         sys.stdout = f
+        writer = csv.writer(csv_file)
+        writer.writerow(['sim_time', 'PDU', 'UPF'])
 
         rng = np.random.default_rng(seed=seed)  # Seed for random number generator
-        scheduler = Scheduler(total_simulation_time, max_upfs, t)  # Initializing scheduler for the experiment
+        scheduler = Scheduler(total_simulation_time, max_upfs, t, writer)  # Initializing scheduler for the experiment
         ue_list = [UE(f"UE{i}") for i in range(num_ue)]  # List of UEs
-        compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, max_upfs, t)  # Initializing compute node for the
-        # experiment
+        compute_node = ComputeNode("CN0", scheduler, 0, 0, 0, max_upfs, t, writer)  # Initializing compute node for
+        # the experiment
 
         scheduler.ue_list = ue_list
         scheduler.compute_node = compute_node
@@ -26,7 +29,7 @@ def main(total_simulation_time, num_ue, seed, sim_num_pdu, max_upfs, t, output_f
         total_pdus_generated = 0  # Total PDUs generated during the experiment
 
         for ue in ue_list:
-            ue.pdu_session_generation(scheduler)
+            ue.pdu_session_generation(scheduler, writer)
             pdu_generation_time = rng.integers(1, total_simulation_time)
             pdu_generation_event = Event(pdu_generation_time, Events.UE_init, 0, ue)
             scheduler.schedule_event(pdu_generation_event)

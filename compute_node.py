@@ -6,7 +6,7 @@ from upf import UPF
 
 
 class ComputeNode:
-    def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity, max_upfs, t):
+    def __init__(self, name, scheduler, node_id, cpu_capacity, storage_capacity, max_upfs, t, csv_writer):
         self.name = name
         self.scheduler = scheduler  # Scheduler of the experiment
         self.node_id = node_id  # Compute Node id
@@ -16,6 +16,7 @@ class ComputeNode:
         self.upf_counter = 0  # Counter to generate unique UPF names
         self.max_upfs = max_upfs  # Maximum number of UPFs allowed during simulation
         self.T = t  # Maximum slots in a UPF
+        self.csv_writer = csv_writer
 
     def allocate_upf(self, pdu_session, current_time):
         if self.upf_instances:
@@ -32,10 +33,12 @@ class ComputeNode:
             # If there are no existing UPFs, create a new one to handle the PDU
             self.scale_out(pdu_session, current_time)
 
+        self.csv_writer.writerow([current_time, pdu_session, ""])  # Write data to CSV
+
     def scale_out(self, pdu_session, current_time):
         if len(self.upf_instances) < self.max_upfs:
             new_upf_name = f"UPF{self.upf_counter}"
-            new_upf = UPF(new_upf_name, self.upf_counter, current_time, self.T)
+            new_upf = UPF(new_upf_name, self.upf_counter, current_time, self.T, self.csv_writer)
             self.upf_instances[new_upf_name] = new_upf
             self.upf_counter += 1
             new_upf.process_pdu_session(pdu_session, current_time, self.scheduler)

@@ -1,3 +1,5 @@
+import random
+
 import numpy as np
 from event import Event
 from events import Events
@@ -20,7 +22,8 @@ class UE:
         pdu_class = None  # Class of PDU being generated
         pdu_duration = np.ceil(np.random.exponential(scale=5))  # Exponential distribution with scale mu=5
         pdu_start_time = np.ceil(scheduler.current_time)  # Start time of the PDU session
-        PDU(self.pdu_session_id, pdu_class, self.name, scheduler.compute_node, pdu_start_time, pdu_duration)
+        pdu_slice = random.choice(["eMBB", "urLLC", "MMTC"])  # Randomly choose a slice
+        PDU(self.pdu_session_id, pdu_class, self.name, scheduler.compute_node, pdu_start_time, pdu_duration, pdu_slice)
         csv_writer.writerow([scheduler.current_time, pdu_session, ""])  # Write data to CSV
         print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, {self.name} generated {pdu_session}")
         print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, "

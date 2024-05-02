@@ -2,6 +2,7 @@ import numpy as np
 
 from event import Event
 from events import Events
+from slice_priority import SLICE_PRIORITIES
 from upf import UPF
 
 
@@ -16,18 +17,21 @@ class ComputeNode:
         self.upf_counter = 0  # Counter to generate unique UPF names
         self.max_upfs = max_upfs  # Maximum number of UPFs allowed during simulation
         self.T = t  # Maximum slots in a UPF
-        self.csv_writer = csv_writer
+        self.csv_writer = csv_writer  # Storing output in csv file
 
     def allocate_upf(self, pdu_session, current_time):
         if self.upf_instances:
-            # Find the UPF with the lowest number of assigned PDUs
-            best_upf_id = min(self.upf_instances, key=lambda upf_id: self.upf_instances[upf_id].num_pdus_handled)
+            # Find the UPF with the highest priority slice among the ones that can handle more PDUs
+            best_upf_id = min(self.upf_instances, key=lambda upf_id: (
+                not self.upf_instances[upf_id].can_handle_more_pdus(),
+                SLICE_PRIORITIES[pdu_session.slice]
+            ))
             best_upf = self.upf_instances[best_upf_id]
 
             if best_upf.can_handle_more_pdus():
                 best_upf.process_pdu_session(pdu_session, current_time, self.scheduler)
             else:
-                # If the UPF with the lowest number of assigned PDUs cannot handle more PDUs, create a new one
+                # If the UPF with the highest priority slice cannot handle more PDUs, create a new one
                 self.scale_out(pdu_session, current_time)
         else:
             # If there are no existing UPFs, create a new one to handle the PDU

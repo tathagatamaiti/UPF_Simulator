@@ -14,7 +14,7 @@ class Scheduler:
         self.upf_dict = {}  # UPF dictionary
         self.max_upfs = max_upfs  # Maximum number of UPFs allowed during simulation
         self.t = t  # Maximum slots in a UPF
-        self.csv_writer = csv_writer
+        self.csv_writer = csv_writer  # Storing output in csv file
 
     def schedule_event(self, event):
         heapq.heappush(self.events, event)

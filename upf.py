@@ -12,7 +12,7 @@ class UPF:
         self.list_pdu = []  # List of PDUs
         self.maxnum_pdu = maxnum_pdu  # Maximum number of PDUs that can be handled by UPF
         self.num_pdus_handled = 0  # Number of PDUs currently being handled
-        self.csv_writer = csv_writer
+        self.csv_writer = csv_writer  # Storing output in csv file
 
     def can_handle_more_pdus(self):
         return self.num_pdus_handled < self.maxnum_pdu

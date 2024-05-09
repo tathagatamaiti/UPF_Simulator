@@ -12,10 +12,13 @@ class UPF:
         self.list_pdu = []  # List of PDUs
         self.maxnum_pdu = maxnum_pdu  # Maximum number of PDUs that can be handled by UPF
         self.num_pdus_handled = 0  # Number of PDUs currently being handled
-        self.csv_writer = csv_writer  # Storing output in csv file
+        self.csv_writer = csv_writer
 
     def can_handle_more_pdus(self):
         return self.num_pdus_handled < self.maxnum_pdu
+
+    def cannot_handle_more_pdus(self):
+        return self.num_pdus_handled == self.maxnum_pdu
 
     def process_pdu_session(self, pdu_session, current_time, scheduler):
         print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, {self.name} processing {pdu_session}")
@@ -23,6 +26,13 @@ class UPF:
         termination_event = Event(current_time + termination_time, Events.PDU_terminate, 3, pdu_session)
         scheduler.schedule_event(termination_event)
         self.num_pdus_handled += 1
+        self.csv_writer.writerow([current_time, pdu_session, self.name])  # Write data to CSV
+
+    def upf_terminate(self, pdu_session, current_time, scheduler):
+        print(f"{Event.event_id_counter}, {np.ceil(scheduler.current_time)}, {self.name} terminated")
+        termination_time = np.ceil(UE.pdu_duration)  # Time after which PDU session is to be terminated
+        termination_event = Event(current_time + termination_time + 1, Events.UPF_terminate, 4, pdu_session)
+        scheduler.schedule_event(termination_event)
         self.csv_writer.writerow([current_time, pdu_session, self.name])  # Write data to CSV
 
     def terminate_pdu_session(self, pdu_session, scheduler):

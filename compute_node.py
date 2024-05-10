@@ -31,8 +31,9 @@ class ComputeNode:
                 best_upf.process_pdu_session(pdu_session, current_time, self.scheduler)
             else:
                 # Initiate scaling-out action if conditions for scaling-in are met
-                self.scale_out(pdu_session, current_time)
-                self.scale_in(current_time)
+                if best_upf.num_pdus_handled == self.num_upfs * self.t - self.T1 - 1 and self.num_upfs < self.max_upfs:
+                    self.scale_out(pdu_session, current_time)
+                    self.scale_in(current_time)
         else:
             # If there are no existing UPFs, create a new one to handle the PDU
             self.scale_out(pdu_session, current_time)

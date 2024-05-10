@@ -49,10 +49,10 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, default=42)  # Seed for random number generator
     parser.add_argument("--sim_num_pdu", type=int, default=20)  # Total number of PDUs in the simulation
     parser.add_argument("--max_upfs", type=int, default=2)  # Maximum number of UPFs allowed during simulation
-    parser.add_argument("--t", type=int, default=2)  # Maximum slots in a UPF
+    parser.add_argument("--t", type=int, default=3)  # Maximum slots in a UPF
     parser.add_argument("--output_file", type=str, default="output.txt")  # Output file for storing the results
-    parser.add_argument("--T1", type=int, default=5)  # Threshold T1
-    parser.add_argument("--T2", type=int, default=2)  # Threshold T2
+    parser.add_argument("--T1", type=int, default=1)  # Threshold T1
+    parser.add_argument("--T2", type=int, default=3)  # Threshold T2
 
     args = parser.parse_args()
     main(args.simulation_time, args.num_ue, args.seed, args.sim_num_pdu, args.max_upfs, args.t, args.output_file,

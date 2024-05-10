@@ -42,7 +42,8 @@ class Scheduler:
             elif event.event_type == Events.PDU_request:
                 pdu_session = event.obj
                 if pdu_session not in self.upf_dict:
-                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time, self.t, self.csv_writer)
+                    self.upf_dict[pdu_session] = UPF(f"UPF{len(self.upf_dict)}", 0, self.current_time,
+                                                     self.t, self.csv_writer)
                 upf = self.upf_dict[pdu_session]
                 self.compute_node.allocate_upf(pdu_session, self.current_time)
             elif event.event_type == Events.PDU_terminate:

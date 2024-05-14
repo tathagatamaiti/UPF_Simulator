@@ -1,6 +1,9 @@
 import numpy as np
+
+import pdu
 from event import Event
 from events import Events
+from ue import UE
 from upf import UPF
 
 
@@ -54,9 +57,10 @@ class ComputeNode:
             if upf_instance.num_pdus_handled == self.t:
                 # Initiate scaling-in action if conditions for scaling-in are met
                 if upf_instance.num_pdus_handled >= self.T2 and self.num_upfs > self.M:
-                    termination_event = Event(current_time, Events.UPF_terminate, 4, upf_instance)
+                    termination_time = np.ceil(UE.pdu_duration)
+                    termination_event = Event(current_time + termination_time, Events.UPF_terminate, 4, upf_instance)
                     self.scheduler.schedule_event(termination_event)
-                    print(f"{Event.event_id_counter}, {np.ceil(self.scheduler.current_time)}, "
+                    print(f"{Event.event_id_counter}, {np.ceil(self.scheduler.current_time + termination_time)}, "
                           f"{upf_instance.name} terminated")
                     del self.upf_instances[upf_name]
                     self.num_upfs -= 1

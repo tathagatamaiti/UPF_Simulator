@@ -53,9 +53,9 @@ sim_time,PDU,UPF
 38,UE3_pdu4,
 38,UE0_pdu4,UPF5
 38,UE0_pdu4,
-38,UE1_pdu4,UPF5
-38,UE1_pdu4,
-38,UE2_pdu4,UPF6
+38,UE2_pdu4,UPF5
 38,UE2_pdu4,
 38,UE3_pdu4,UPF6
 38,UE3_pdu4,
+38,UE1_pdu4,UPF6
+38,UE1_pdu4,
